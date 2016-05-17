@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KTourApiSDK_Example' do
+  pod 'KTourApiSDK', :path => '../'
+
+  target 'KTourApiSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
