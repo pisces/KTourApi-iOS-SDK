@@ -34,6 +34,25 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
-	</array>
+    </array>
+    <key>KTourApiServiceKey</key>
+    <string>JzlmZb9e3Cj5lOzZt3gUg5JXFDv0Oy6VfzYlCjXL6jSJC9tBkF6n5%2BF8Ab5dmU6QZmceUbqpXRa3JMryHM3I%2FQ%3D%3D</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>visitkorea.or.kr</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSThirdPartyExceptionMinimumTLSVersion</key>
+                <string>TLSv1.1</string>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

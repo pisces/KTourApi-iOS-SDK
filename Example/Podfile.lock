@@ -1,0 +1,26 @@
+PODS:
+  - apxml (1.0)
+  - KTourApiSDK (1.0.0):
+    - PSFoundation
+    - w3action
+  - PSFoundation (1.0.3)
+  - w3action (1.3.3):
+    - apxml
+    - PSFoundation
+
+DEPENDENCIES:
+  - KTourApiSDK (from `../`)
+
+EXTERNAL SOURCES:
+  KTourApiSDK:
+    :path: ../
+
+SPEC CHECKSUMS:
+  apxml: 0930b839c8be6734f5091f8c8889b00f7d59559c
+  KTourApiSDK: e1a1914b28496161f9afa713be25b18b7a9f6b1e
+  PSFoundation: b9e94c4279bac37b87529384da601e04c5ed0952
+  w3action: 003618c6d8172fb508bef7715e52992e6d06be6b
+
+PODFILE CHECKSUM: 85d5d1998d7e3745c6dfe5363db319662a4f0920
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,6 @@
+framework module KTourApiSDK {
+  umbrella header "KTourApiSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
