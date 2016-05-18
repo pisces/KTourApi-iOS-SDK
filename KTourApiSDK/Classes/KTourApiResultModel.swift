@@ -45,11 +45,13 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
                 }
                 
                 if let items = body["items"]! {
-                    if let item: AnyObject = items["item"]! {
-                        if (item.isKindOfClass(NSArray.self)) {
-                            self.items = self.childWithArray(item as? Array, classType: T.self) as? Array
-                        } else if (item.isKindOfClass(NSDictionary.self)) {
-                            self.items = [T(object: item)]
+                    if !items.isEmpty {
+                        if let item: AnyObject = items["item"]! {
+                            if (item.isKindOfClass(NSArray.self)) {
+                                self.items = self.childWithArray(item as? Array, classType: T.self) as? Array
+                            } else if (item.isKindOfClass(NSDictionary.self)) {
+                                self.items = [T(object: item)]
+                            }
                         }
                     }
                 }
@@ -71,10 +73,6 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
 
 class KTourApiResultItem {
     class Area: AbstractJSONModel {
-        // ================================================================================================
-        //  getter/setter
-        // ================================================================================================
-        
         public private(set) var rnum: Int = 0
         public private(set) var code: NSString?
         public private(set) var name: String?
@@ -134,30 +132,31 @@ class KTourApiResultItem {
     }
     
     class FestivalPOI: POI {
-        // ================================================================================================
-        //  getter/setter
-        // ================================================================================================
-        
         public private(set) var eventstartdate: NSDate?
         public private(set) var eventenddate: NSDate?
     }
     
     class StayPOI: POI {
-        // ================================================================================================
-        //  getter/setter
-        // ================================================================================================
-        
         public private(set) var hanok: Bool = false
         public private(set) var benikia: Bool = false
         public private(set) var goodstay: Bool = false
     }
     
     class POIDetail: POI {
-        // ================================================================================================
-        //  getter/setter
-        // ================================================================================================
-        
         public private(set) var dongcode: Int = 0
         public private(set) var overview: String?
+    }
+    
+    class POIIntro: AbstractJSONModel {
+        public private(set) var contentid: Int = 0
+        public private(set) var contenttypeid: String?
+        public private(set) var firstmenu: String?
+        public private(set) var infocenterfood: String?
+        public private(set) var opentimefood: String?
+        public private(set) var parkingfood: String?
+        public private(set) var reservationfood: String?
+        public private(set) var restdatefood: String?
+        public private(set) var smoking: String?
+        public private(set) var treatmenu: String?
     }
 }

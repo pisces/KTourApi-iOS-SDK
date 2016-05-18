@@ -18,6 +18,26 @@ class KTourApiParameterSet: AbstractModel {
         RegistDate  = "D"
     }
     
+    override func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
+        if isBoolean(key: key) {
+            return String(value) == "Y"
+        }
+        
+        return super.format(value, forKey: key)
+    }
+    
+    override func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
+        if isBoolean(key: key) {
+            return (value as! Bool) ? "Y" : "N"
+        }
+        
+        return super.unformat(value, forKey: key)
+    }
+    
+    internal func isBoolean(key aKey: String!) -> Bool {
+        return false
+    }
+    
     class Common: KTourApiParameterSet {
         public var numOfRows: Int = 0
         public var pageNo: Int = 0
@@ -88,7 +108,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String? = nil, defaultYN: Bool = false, firstImageYN: Bool = false, areacodeYN: Bool = false, catcodeYN: Bool = false, addrinfoYN: Bool = false, mapinfoYN: Bool = false, overviewYN: Bool = false, transGuideYN: Bool = false) {
+        init(contentId: Int, contentTypeId: String? = nil, defaultYN: Bool = true, firstImageYN: Bool = true, areacodeYN: Bool = true, catcodeYN: Bool = true, addrinfoYN: Bool = true, mapinfoYN: Bool = true, overviewYN: Bool = true, transGuideYN: Bool = true) {
             super.init()
             
             self.contentId = contentId
@@ -103,24 +123,30 @@ class KTourApiParameterSet: AbstractModel {
             self.transGuideYN = transGuideYN
         }
         
-        override func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
-            if isBoolean(key: key) {
-                return String(value) == "Y"
-            }
-            
-            return super.format(value, forKey: key)
-        }
-        
-        override func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
-            if isBoolean(key: key) {
-                return (value as! Bool) ? "Y" : "N"
-            }
-            
-            return super.unformat(value, forKey: key)
-        }
-        
-        private func isBoolean(key aKey: String!) -> Bool {
+        override func isBoolean(key aKey: String!) -> Bool {
             return "defaultYN" == aKey || "firstImageYN" == aKey || "areacodeYN" == aKey || "catcodeYN" == aKey || "addrinfoYN" == aKey || "mapinfoYN" == aKey || "overviewYN" == aKey || "transGuideYN" == aKey
+        }
+    }
+    
+    class DetailIntro: KTourApiParameterSet {
+        public var introYN: Bool = false
+        public var contentId: Int = 0
+        public var contentTypeId: String!
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+        
+        init(contentId: Int, contentTypeId: String!, introYN: Bool = true) {
+            super.init()
+            
+            self.contentId = contentId
+            self.contentTypeId = contentTypeId
+            self.introYN = introYN
+        }
+        
+        override func isBoolean(key aKey: String!) -> Bool {
+            return "introYN" == aKey
         }
     }
     

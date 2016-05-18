@@ -225,14 +225,39 @@ class KTourApiAppCenterTest: XCTestCase {
                 XCTAssertNotNil(result)
                 XCTAssertNil(error)
                 
-                print("result", result?.sourceObject);
+                if result!.items != nil {
+                    for item in result!.items! {
+//                        print("item ->", item.dictionary)
+                        XCTAssertNotNil(item)
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIDetail.self))
+                    }
+                }
+                
+                expectation.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(10) { error in
+        }
+    }
+    
+    func testCallDetailIntro() {
+        let expectation = expectationWithDescription("testCallDetailInfo")
+        
+        KTourApiAppCenter.defaultCenter().call(
+            path: KTourApiPath.DetailIntro,
+            params: KTourApiParameterSet.DetailIntro(contentId: 1342755, contentTypeId: "82"),
+            completion: {(result: KTourApiResult<KTourApiResultItem.POIIntro>?, error:NSError?) -> Void in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                print("result?.sourceObject", result?.sourceObject)
+                
                 return
                 if result!.items != nil {
                     for item in result!.items! {
                         print("item ->", item.dictionary)
-                        
                         XCTAssertNotNil(item)
-                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIDetail.self))
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIIntro.self))
                     }
                 }
                 
