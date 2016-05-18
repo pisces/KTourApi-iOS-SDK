@@ -6,15 +6,34 @@
 //  Copyright © 2016 Steve Kim. All rights reserved.
 //
 
+import PSFoundation
 import w3action
 
 enum KTourApiLanguageType: String {
-    case Chs = "ChsService", Cht = "ChtService"
+    case
+    Chs = "ChsService",
+    Cht = "ChtService",
+    Eng = "EngService",
+    Ger = "GerService",
+    Fre = "FreService",
+    Jpn = "JpnService",
+    Rus = "RusService",
+    Spn = "SpnService"
 }
 
 enum KTourApiPath: String {
-    case AreaCode = "areaCode",
-    LocationBasedList = "locationBasedList"
+    case
+    AreaCode            = "areaCode",
+    AreaBasedList       = "areaBasedList",
+    CategoryCode        = "categoryCode",
+    DetailCommon        = "detailCommon",
+    DetailImage         = "detailImage",
+    DetailInfo          = "detailInfo",
+    DetailIntro         = "detailIntro",
+    LocationBasedList   = "locationBasedList",
+    SearchFestival      = "searchFestival",
+    SearchKeyword       = "searchKeyword",
+    SearchStay          = "searchStay"
 }
 
 class KTourApiAppCenter: NSObject {
@@ -25,14 +44,12 @@ class KTourApiAppCenter: NSObject {
     let kKTourApiParamsMobileOS = "MobileOS"
     let kKTourApiParamsServiceKey = "ServiceKey"
     
-    typealias TourApiCallCompleteHandler = (result: KTourApiResultModel?, error: NSError?) -> Void
-    
     // ================================================================================================
     //  Overridden: NSObject
     // ================================================================================================
     
     override init() {
-        serviceKey = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as! String;
+        serviceKey = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as? String;
         
         if serviceKey == nil {
             #if DEBUG
@@ -58,13 +75,15 @@ class KTourApiAppCenter: NSObject {
         return Static.instance!
     }
     
-    public func call(path: KTourApiPath, params: NSDictionary?, completion: TourApiCallCompleteHandler?) {
+    public func call<T: KTourApiParameterSet, Y: AbstractJSONModel>(path aPath: KTourApiPath,
+                     params: T?,
+                     completion: ((result: KTourApiResult<Y>?, error: NSError?) -> Void)?) {
         HTTPActionManager.sharedInstance().doActionWithRequestObject(
-            requestObjectWithPath(path, params: params, completion: completion),
+            requestObjectWithPath(aPath, params: params, completion: completion),
             success: {(result: AnyObject?) -> Void in
                 if (result != nil && completion != nil) {
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                        let model: KTourApiResultModel = KTourApiResultModel(object: result)
+                        let model: KTourApiResult = KTourApiResult<Y>(object: result)
                         
                         dispatch_async(dispatch_get_main_queue()) {
                             completion!(result: model, error: nil)
@@ -82,10 +101,12 @@ class KTourApiAppCenter: NSObject {
     //  private
     // ================================================================================================
     
-    private func requestObjectWithPath(path: KTourApiPath, params: NSDictionary?, completion: TourApiCallCompleteHandler?) -> HTTPRequestObject {
+    private func requestObjectWithPath<T: KTourApiParameterSet, Y: AbstractJSONModel>(path: KTourApiPath,
+                                       params: T?,
+                                       completion: ((result: Y?, error: NSError?) -> Void)?) -> HTTPRequestObject {
         let url: String = kKTourApiBasePath + "/" + languageType.rawValue + "/" + path.rawValue
         
-        let _params = params != nil ? NSMutableDictionary(dictionary: params!) : NSMutableDictionary()
+        let _params = params != nil ? NSMutableDictionary(dictionary: params!.dictionary) : NSMutableDictionary()
         _params[kKTourApiParamsDataType] = DataTypeJSON
         _params[kKTourApiParamsMobileApp] = bundleName
         _params[kKTourApiParamsMobileOS] = "IOS"
