@@ -8,12 +8,12 @@
 
 import PSFoundation
 
-class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
+public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     // ================================================================================================
     //  Overridden: AbstractJSONModel
     // ================================================================================================
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -21,7 +21,7 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
         super.init(object: object)
     }
     
-    override func setProperties(object: AnyObject?) {
+    override public func setProperties(object: AnyObject?) {
         super.setProperties(object)
         
         if let dict: NSDictionary = object as! NSDictionary {
@@ -80,34 +80,34 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     var totalCount: Int = 0
     var resultCode: KTourApiResultCode = KTourApiResultCode.UNKNOWN_ERROR
     var resultMsg: String?
-    var items: Array<T>?
+    public var items: Array<T>?
 }
 
-class KTourApiResultItem {
-    class Code: AbstractJSONModel {
+public class KTourApiResultItem: AbstractJSONModel {
+    public class Code: KTourApiResultItem {
         var rnum: Int = 0
         var name: String?
     }
     
-    class Area: Code {
+    public class Area: Code {
         var code: Int = 0
     }
     
-    class Category: Code {
+    public class Category: Code {
         var code: String?
     }
     
-    class POIBase: AbstractJSONModel {
+    public class POIBase: KTourApiResultItem {
         var contentid: Int = 0
         var contentidtype: Int = 0
     }
     
-    class POI: POIBase {
+    public class POI: POIBase {
         // ================================================================================================
         //  Overridden: AbstractJSONModel
         // ================================================================================================
         
-        override func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
+        override public func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
             if (("createdtime" == key || "modifiedtime" == key) && value != nil) {
                 let formatter: NSDateFormatter = NSDateFormatter.localizedFormatter();
                 formatter.dateFormat = "yyyyMMddHHmmss"
@@ -117,7 +117,7 @@ class KTourApiResultItem {
             return super.format(value, forKey: key)
         }
         
-        override func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
+        override public func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
             if (("createdtime" == key || "modifiedtime" == key) && value != nil) {
                 let formatter: NSDateFormatter = NSDateFormatter.localizedFormatter();
                 formatter.dateFormat = "yyyyMMddHHmmss"
@@ -153,30 +153,30 @@ class KTourApiResultItem {
         var modifiedtime: NSDate?
     }
     
-    class FestivalPOI: POI {
+    public class FestivalPOI: POI {
         var eventstartdate: NSDate?
         var eventenddate: NSDate?
     }
     
-    class StayPOI: POI {
+    public class StayPOI: POI {
         var hanok: Bool = false
         var benikia: Bool = false
         var goodstay: Bool = false
     }
     
-    class POIDetail: POI {
+    public class POIDetail: POI {
         var dongcode: Int = 0
         var overview: String?
     }
     
-    class POIDetailInfo: POIBase {
+    public class POIDetailInfo: POIBase {
         var fldgubun: Int = 0
         var serialnum: Int = 0
         var infoname: String?
         var infotext: String?
     }
     
-    class POIDetailIntro: POIBase {
+    public class POIDetailIntro: POIBase {
         var firstmenu: String?
         var infocenterfood: String?
         var opentimefood: String?
@@ -187,7 +187,7 @@ class KTourApiResultItem {
         var treatmenu: String?
     }
     
-    class POIDetailImage: POIBase {
+    public class POIDetailImage: POIBase {
         var imagename: String?
         var originimgurl: String?
         var serialnum: String?

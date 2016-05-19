@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = "KTourApiSDK is open source sdk to use Korea Tour Api."
+  s.description      = "KTourApiSDK is open source iOS sdk to use Korea Tour Api."
 
   s.homepage         = "https://github.com/pisces/KTourApiSDK"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"

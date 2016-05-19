@@ -8,8 +8,8 @@
 
 import PSFoundation
 
-class KTourApiParameterSet: AbstractModel {
-    enum ArrangeType: String {
+public class KTourApiParameterSet: AbstractModel {
+    public enum ArrangeType: String {
         case
         None        = "",
         Title       = "A",
@@ -18,7 +18,7 @@ class KTourApiParameterSet: AbstractModel {
         RegistDate  = "D"
     }
     
-    override func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
+    override public func format(value: AnyObject!, forKey key: String!) -> AnyObject! {
         if isBoolean(key: key) {
             return String(value) == "Y"
         }
@@ -26,7 +26,7 @@ class KTourApiParameterSet: AbstractModel {
         return super.format(value, forKey: key)
     }
     
-    override func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
+    override public func unformat(value: AnyObject!, forKey key: String!) -> AnyObject! {
         if isBoolean(key: key) {
             return (value as! Bool) ? "Y" : "N"
         }
@@ -38,17 +38,17 @@ class KTourApiParameterSet: AbstractModel {
         return false
     }
     
-    class Common: KTourApiParameterSet {
+    public class Common: KTourApiParameterSet {
         public var numOfRows: Int = 0
         public var pageNo: Int = 0
         public var arrange: String?
         public var listYN: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int) {
             super.init()
             
             self.listYN = listYN
@@ -58,31 +58,31 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class AreaCode: Common {
+    public class AreaCode: Common {
         public var areaCode: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, areaCode: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, areaCode: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.areaCode = areaCode
         }
     }
     
-    class CategoryCode: Common {
+    public class CategoryCode: Common {
         public var contentTypeId: String?
         public var cat1: String?
         public var cat2: String?
         public var cat3: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.contentTypeId = contentTypeId
@@ -92,7 +92,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class Content: KTourApiParameterSet {
+    public class Content: KTourApiParameterSet {
         public var contentId: Int = 0
         public var contentTypeId: String?
         
@@ -100,7 +100,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String? = nil) {
+        public init(contentId: Int, contentTypeId: String? = nil) {
             super.init()
             
             self.contentId = contentId
@@ -108,7 +108,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailCommon: Content {
+    public class DetailCommon: Content {
         public var defaultYN: Bool = false
         public var firstImageYN: Bool = false
         public var areacodeYN: Bool = false
@@ -122,7 +122,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String? = nil, defaultYN: Bool = true, firstImageYN: Bool = true, areacodeYN: Bool = true, catcodeYN: Bool = true, addrinfoYN: Bool = true, mapinfoYN: Bool = true, overviewYN: Bool = true, transGuideYN: Bool = true) {
+        public init(contentId: Int, contentTypeId: String? = nil, defaultYN: Bool = true, firstImageYN: Bool = true, areacodeYN: Bool = true, catcodeYN: Bool = true, addrinfoYN: Bool = true, mapinfoYN: Bool = true, overviewYN: Bool = true, transGuideYN: Bool = true) {
             super.init(contentId: contentId, contentTypeId: contentTypeId)
             
             self.defaultYN = defaultYN
@@ -140,14 +140,14 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailInfo: Content {
+    public class DetailInfo: Content {
         public var detailYN: Bool = false
         
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String!, detailYN: Bool = true) {
+        public init(contentId: Int, contentTypeId: String!, detailYN: Bool = true) {
             super.init(contentId: contentId, contentTypeId: contentTypeId)
             
             self.detailYN = detailYN
@@ -158,14 +158,14 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailImage: Content {
+    public class DetailImage: Content {
         public var imageYN: Bool = false
         
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String!, imageYN: Bool = true) {
+        public init(contentId: Int, contentTypeId: String!, imageYN: Bool = true) {
             super.init(contentId: contentId, contentTypeId: contentTypeId)
             
             self.imageYN = imageYN
@@ -176,14 +176,14 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailIntro: Content {
+    public class DetailIntro: Content {
         public var introYN: Bool = false
         
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
-        init(contentId: Int, contentTypeId: String!, introYN: Bool = true) {
+        public init(contentId: Int, contentTypeId: String!, introYN: Bool = true) {
             super.init(contentId: contentId, contentTypeId: contentTypeId)
             
             self.introYN = introYN
@@ -194,7 +194,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class AreaBasedList: CategoryCode {
+    public class AreaBasedList: CategoryCode {
         public var areaCode: String?
         public var sigunguCode: String?
         
@@ -202,7 +202,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?, areaCode: String?,  sigunguCode: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?, areaCode: String?,  sigunguCode: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo, contentTypeId: contentTypeId, cat1: cat1, cat2: cat2, cat3: cat3)
             
             self.areaCode = areaCode
@@ -210,7 +210,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class LocationBasedList: Common {
+    public class LocationBasedList: Common {
         public var mapX: Float = 0.0
         public var mapY: Float = 0.0
         public var radius: Int = 0
@@ -220,7 +220,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, mapX: Float, mapY: Float, radius: Int = 1000) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, mapX: Float, mapY: Float, radius: Int = 1000) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.contentTypeId = contentTypeId
@@ -230,7 +230,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class SearchFestival: Common {
+    public class SearchFestival: Common {
         public var areaCode: String?
         public var sigunguCode: String?
         public var eventEndDate: NSDate?
@@ -240,7 +240,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, eventStartDate: NSDate?, eventEndDate: NSDate?, areaCode: String?,  sigunguCode: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, eventStartDate: NSDate?, eventEndDate: NSDate?, areaCode: String?,  sigunguCode: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.eventStartDate = eventStartDate
@@ -250,7 +250,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class SearchKeyword: CategoryCode {
+    public class SearchKeyword: CategoryCode {
         public var areaCode: String?
         public var sigunguCode: String?
         public var keyword: String?
@@ -259,7 +259,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, keyword: String?, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?, areaCode: String?,  sigunguCode: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, keyword: String?, contentTypeId: String?, cat1: String?, cat2: String?, cat3: String?, areaCode: String?,  sigunguCode: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo, contentTypeId: contentTypeId, cat1: cat1, cat2: cat2, cat3: cat3)
             
             self.keyword = keyword
@@ -268,7 +268,7 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class SearchStay: Common {
+    public class SearchStay: Common {
         public var hanOk: Bool = false
         public var benikia: Bool = false
         public var goodStay: Bool = false
@@ -280,7 +280,7 @@ class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, hanOk: Bool = false, benikia: Bool = false, goodStay: Bool = false, contentTypeId: String?, areaCode: String?,  sigunguCode: String?) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, hanOk: Bool = false, benikia: Bool = false, goodStay: Bool = false, contentTypeId: String?, areaCode: String?,  sigunguCode: String?) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.hanOk = hanOk

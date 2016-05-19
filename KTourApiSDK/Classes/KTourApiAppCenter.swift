@@ -9,7 +9,7 @@
 import PSFoundation
 import w3action
 
-enum KTourApiLanguageType: String {
+public enum KTourApiLanguageType: String {
     case
     Chs = "ChsService",
     Cht = "ChtService",
@@ -21,7 +21,7 @@ enum KTourApiLanguageType: String {
     Spn = "SpnService"
 }
 
-enum KTourApiPath: String {
+public enum KTourApiPath: String {
     case
     AreaCode            = "areaCode",
     AreaBasedList       = "areaBasedList",
@@ -36,7 +36,17 @@ enum KTourApiPath: String {
     SearchStay          = "searchStay"
 }
 
-class KTourApiAppCenter: NSObject {
+public func KTourApiPathGetAll() -> Array<KTourApiPath> {
+    return [KTourApiPath.AreaCode,
+            KTourApiPath.CategoryCode,
+            KTourApiPath.AreaBasedList,
+            KTourApiPath.LocationBasedList,
+            KTourApiPath.SearchFestival,
+            KTourApiPath.SearchKeyword,
+            KTourApiPath.SearchStay]
+}
+
+public class KTourApiAppCenter: NSObject {
     let kKTourApiServiceKey: String = "KTourApiServiceKey"
     let kKTourApiBasePath: String = "http://api.visitkorea.or.kr/openapi/service/rest"
     let kKTourApiParamsDataType = "_type"
@@ -62,7 +72,7 @@ class KTourApiAppCenter: NSObject {
     //  Public
     // ================================================================================================
     
-    static func defaultCenter() -> KTourApiAppCenter {
+    static public func defaultCenter() -> KTourApiAppCenter {
         struct Static {
             static var onceToken: dispatch_once_t = 0
             static var instance: KTourApiAppCenter? = nil
