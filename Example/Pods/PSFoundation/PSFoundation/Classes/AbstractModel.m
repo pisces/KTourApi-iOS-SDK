@@ -96,6 +96,9 @@ NSString *const kModelDidSynchronizeNotification = @"kModelDidSynchronizeNotific
         
         NSString *typeString = @([orgValue objCType]);
         
+        if (!typeString)
+            return value;
+        
         if ([typeString isEqualToString:@"c"] ||
             [typeString isEqualToString:@"B"])
             return @([value boolValue]);

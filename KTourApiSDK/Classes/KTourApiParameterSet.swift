@@ -1,9 +1,9 @@
 //
 //  KTourApiParameterSet.swift
-//  Pods
+//  KTourApiSDK
 //
 //  Created by Steve Kim on 5/17/16.
-//
+//  Copyright © 2016 Steve Kim. All rights reserved.
 //
 
 import PSFoundation
@@ -92,7 +92,23 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailCommon: KTourApiParameterSet {
+    class Content: KTourApiParameterSet {
+        public var contentId: Int = 0
+        public var contentTypeId: String?
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+        
+        init(contentId: Int, contentTypeId: String? = nil) {
+            super.init()
+            
+            self.contentId = contentId
+            self.contentTypeId = contentTypeId
+        }
+    }
+    
+    class DetailCommon: Content {
         public var defaultYN: Bool = false
         public var firstImageYN: Bool = false
         public var areacodeYN: Bool = false
@@ -101,18 +117,14 @@ class KTourApiParameterSet: AbstractModel {
         public var mapinfoYN: Bool = false
         public var overviewYN: Bool = false
         public var transGuideYN: Bool = false
-        public var contentId: Int = 0
-        public var contentTypeId: String?
         
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
         init(contentId: Int, contentTypeId: String? = nil, defaultYN: Bool = true, firstImageYN: Bool = true, areacodeYN: Bool = true, catcodeYN: Bool = true, addrinfoYN: Bool = true, mapinfoYN: Bool = true, overviewYN: Bool = true, transGuideYN: Bool = true) {
-            super.init()
+            super.init(contentId: contentId, contentTypeId: contentTypeId)
             
-            self.contentId = contentId
-            self.contentTypeId = contentTypeId
             self.defaultYN = defaultYN
             self.firstImageYN = firstImageYN
             self.areacodeYN = areacodeYN
@@ -128,20 +140,52 @@ class KTourApiParameterSet: AbstractModel {
         }
     }
     
-    class DetailIntro: KTourApiParameterSet {
+    class DetailInfo: Content {
+        public var detailYN: Bool = false
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+        
+        init(contentId: Int, contentTypeId: String!, detailYN: Bool = true) {
+            super.init(contentId: contentId, contentTypeId: contentTypeId)
+            
+            self.detailYN = detailYN
+        }
+        
+        override func isBoolean(key aKey: String!) -> Bool {
+            return "detailYN" == aKey
+        }
+    }
+    
+    class DetailImage: Content {
+        public var imageYN: Bool = false
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+        
+        init(contentId: Int, contentTypeId: String!, imageYN: Bool = true) {
+            super.init(contentId: contentId, contentTypeId: contentTypeId)
+            
+            self.imageYN = imageYN
+        }
+        
+        override func isBoolean(key aKey: String!) -> Bool {
+            return "imageYN" == aKey
+        }
+    }
+    
+    class DetailIntro: Content {
         public var introYN: Bool = false
-        public var contentId: Int = 0
-        public var contentTypeId: String!
         
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
         init(contentId: Int, contentTypeId: String!, introYN: Bool = true) {
-            super.init()
+            super.init(contentId: contentId, contentTypeId: contentTypeId)
             
-            self.contentId = contentId
-            self.contentTypeId = contentTypeId
             self.introYN = introYN
         }
         

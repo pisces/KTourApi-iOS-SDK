@@ -7,92 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0749D36AC0728B9100CC6ABBC9AE4FBB /* NSString+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B29933743AFB6E8299FE38CBB8C02E7 /* NSString+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07FE89D4774FD6EA153AF51775E6EA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
+		0D7C0794F1AA9FD33842634D0DB39455 /* BaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D711141E30A83DE00DAA8D44D1E8DF /* BaseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D7E0DEB0BD4F0A6BE280B210F7A7F5A /* apxml-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5F9521C6FFDA431899135ED6CAEE74 /* apxml-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F7135BC25838A5BCACE73F98979377A /* NSData+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD599E0C5D5F42EEA1AA6F6001D36BB /* NSData+w3action.m */; };
 		10D01FDF239CE9CE760099569B3CF930 /* Pods-KTourApiSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2D64FB08969640F15C0B51FABA2CF1 /* Pods-KTourApiSDK_Tests-dummy.m */; };
-		17E8838EFFB9FDF1D971FF29127088C7 /* NSDictionary+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 30029536BCC2DB7D76C0F69E8113FAC4 /* NSDictionary+w3action.m */; };
-		1A5F6639C65D4F2D7F67983D777FD140 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C890F3CB3E28E53350F72C44A5C9948 /* BaseObject.m */; };
+		125E18D88CAF065CE1CCE50A3FA55E14 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C21B4B8D970B9896C3EBDDD439AF0F7 /* AbstractModel.m */; };
+		135796228D50F6C2CEF1DE4873FD8D4A /* NSString+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B29933743AFB6E8299FE38CBB8C02E7 /* NSString+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16F0C8792E4FC544032D3FD829128E1C /* PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A225132F22ED5A09A19175177DA9B6 /* PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6F66A207F46F89D8A0E79068774666 /* NSString+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D05B9773E09F95FB063615FB7852E57 /* NSString+PSFoundation.m */; };
 		210FA2AF5485849CA44795C0F8985EB5 /* APElement.h in Headers */ = {isa = PBXBuildFile; fileRef = AE2D8277291AE221F3F3D944C8EB0BBF /* APElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25439842B6BF76D5C1CC1052DBFB8F06 /* NSObject+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DE700C3E3E47E93EDBF508619AEA0 /* NSObject+PSFoundation.m */; };
-		2583BCEE4A1A5558A5065E77A62BA4FC /* AbstractModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E721F84EC0091EC4FED4F5B337531C /* AbstractModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29775E5B29B4464F8AB981A3F9448C88 /* KTourApiSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8531C45291BD2FA212D502C78B687D /* KTourApiSDK.swift */; };
-		297AE37CA4C9503E91646EF1559C49E4 /* apxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC2B4133DD38C0C1EA3B2AED0EF1473 /* apxml.framework */; };
-		2D70847E876ACFB173113FABF02B3442 /* BaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D711141E30A83DE00DAA8D44D1E8DF /* BaseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		314E89091E53A8B7AAC04EC9B747AA41 /* NSString+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D05B9773E09F95FB063615FB7852E57 /* NSString+PSFoundation.m */; };
-		33B47C7C8456CCCDE80622F49DB7023C /* NSURL+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F98585D8C935F2D7060944E137F17DFD /* NSURL+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26FA967DCEFF2C519BA4508AC97C3468 /* NSArray+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC734DF3525F111B8CBC770BAB4326D /* NSArray+PSFoundation.m */; };
+		2D3D9B2ED37789F50635C6C0134C85A4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C061EACBF6CB3DA6252D212F88ADAC /* CFNetwork.framework */; };
+		315D0218229E932DA6FDA4D57D1EF92F /* NSURLRequest+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6784509C10320CA13751A680EC2CA4 /* NSURLRequest+PSFoundation.m */; };
 		358AB803B4FFFF9692136ED226455FB6 /* APAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F20EADAC9927B7C6E78B57C809250A2B /* APAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		380942A9B120E26A5DB4F1C671DAA60A /* ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 91DC109A5C8234B381236045B3AB8A95 /* ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38EFF8AA55261FA3A84B52E161135C86 /* KTourApiSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33111743FD6A03592FFA46ABCC6D440D /* KTourApiSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4350AC80C1007010BDDAFB823F54993B /* NSString+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E86863BAA1384676E19C2026909555F /* NSString+w3action.m */; };
+		36832D68B9E7FBEA4FB9F9F7765231E1 /* KTourApiSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59881E0E53CA3EBB0AC5319132627BF6 /* KTourApiSDK-dummy.m */; };
+		370A92160A1447517037C009D1127189 /* HTTPActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB46A6D8D8AA99DCAB9DE4E25B5BEF82 /* HTTPActionManager.m */; };
+		38844756048A6906BBDC82CFB2BCDF32 /* PSFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF02D3EE84374FBB7E6F30E7438B26E2 /* PSFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2D01DE64C4218D95EFB1DC50BFBF32 /* NSArray+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59CE4D58D9D8A75D0ADF2517FC409097 /* NSArray+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		418EB515970D3B44A0D5FC40C8C653F5 /* KTourApiResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C156192E821D70673A933F0140F345A /* KTourApiResultModel.swift */; };
+		4226528C1984D0922B7FB149BB974B1F /* NSData+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD599E0C5D5F42EEA1AA6F6001D36BB /* NSData+w3action.m */; };
+		4397880A720D3DB62D64759DD558F0E0 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C890F3CB3E28E53350F72C44A5C9948 /* BaseObject.m */; };
 		48C4C15BDBF6C5211D6209063E89F8BD /* Pods-KTourApiSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A0A74D8D610236952DAF22F6B7DA69 /* Pods-KTourApiSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B39CBA22D9BE78F65F302A90D0D477F /* model.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DF62EF60221A064D198B6C300930AC /* model.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CE4139462EC8647E559CE92260B30CA /* HTTPRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF33A3C326D6CA71159051BEC36AA02 /* HTTPRequestObject.m */; };
+		4C8FAF1D3CD786EEF5E7908304CF6669 /* KTourApiSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD53210D289EA742178ABAC5CAF9082 /* KTourApiSDK.swift */; };
+		4CCB28A66F101BA0D4CA3048C36438EF /* KTourApiAppCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6629C44EDC8160CEBE8FACF8CD5A989 /* KTourApiAppCenter.swift */; };
+		4F9673E845136F1C98F1EBCAC42A054A /* PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD023B4EC32FBFCF6C30D3FAE071401 /* PSFoundation.m */; };
 		52B1550DF6B6C4DBC861531B3EB95EFC /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EE94CDFDC2F040909769B30678D9DE /* APAttribute.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		562CB1597F9114DBC2D8F210EAFE9A32 /* AbstractJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E6940816D74F9B8C28196E466EBE04E6 /* AbstractJSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		602C9BBE74F0E22C052D488CC51F3D39 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C061EACBF6CB3DA6252D212F88ADAC /* CFNetwork.framework */; };
-		61C18775D4F27D4231AE2CA5E84AA47A /* PSFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B2FC3159FCAE7C36F0A3CDCF4C663D /* PSFoundation-dummy.m */; };
-		63D28A0C6FC1A441BDAB106AD8B1898E /* DataLoadValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1153721BE3EFD3B51151FDAB5DCB132E /* DataLoadValidator.m */; };
-		65454E9E17EA9D0F3E07FE979FB41590 /* NSArray+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59CE4D58D9D8A75D0ADF2517FC409097 /* NSArray+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66C6C163DF0330F95636B98BE5C3BFE4 /* w3action-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E90B942D0AFAEFFE7E428EFA377285 /* w3action-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		675D8E46309E326C1DD356BD55E21968 /* AbstractJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E74112FD7CEB8A0ED3DB296158DEA375 /* AbstractJSONModel.m */; };
-		68B881C3C902952D9E7E4F9FB72B8382 /* KTourApiSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59881E0E53CA3EBB0AC5319132627BF6 /* KTourApiSDK-dummy.m */; };
-		6EF95FCCBFD2C9CA5C72D329575CD61C /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 28DB0BE0EF7B7EA0AE135681EF592FC4 /* en.lproj */; };
+		58692D7ACEBBBD740206765FB72509A8 /* DataLoadValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = E72F9E8704603DC7FF0573A85E83C416 /* DataLoadValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C7A65597F40F929B2538A612326F4A3 /* NSBundle+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44243A80F03D960900592628B667EB55 /* NSBundle+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EA232A970CE3769241CAD0ECC780F64 /* w3action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF8C78FA67FAC8F3F65C3CD28CFA20B /* w3action.framework */; };
+		6CD1214D51404DB34F818A07FCF7D2F0 /* apxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC2B4133DD38C0C1EA3B2AED0EF1473 /* apxml.framework */; };
 		70CC90098F2256E910321E20919A9221 /* APDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C213406D4E8B00527C9903319F9299 /* APDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73E2258CE2390DB1FDE614CFF349F9F5 /* NSObject+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C467A4A9EA09553785D1734C8C007354 /* NSObject+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		753243781E1BB8F253678A8EEAD0E692 /* NSData+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = 8432D89400264C283F174B93F7F39E2F /* NSData+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7121D29710A948CEF96D4A5B17ADEE84 /* NSString+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EFB21851541D142C3D2ECC3BF91611 /* NSString+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71C99C092F2138A37C4C1B8C2459E16E /* NSURL+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A656EF395E8F91F23CCEAEFF17B80 /* NSURL+PSFoundation.m */; };
+		71FC00BDFEA411E0345E15405C4DE6FB /* PSFoundation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF8493EF0D50EA052C1D6D633BBFC2E8 /* PSFoundation.bundle */; };
+		77E443AE64DE84C061DC0E8AB26DA307 /* NSDate+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F57F05D6370D00D3272306409B1E10C /* NSDate+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79C1DCEB51526E497FA67F4F9EE57069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
-		7EDEBA6AF12B96DB959ABBB47CBF66C7 /* HTTPActionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF82006872056A43ABAC0DB253507F28 /* HTTPActionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AEE5ECFB565D3424002D7D69A7BFEBE /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E043B63AF8A83ED83124563C094491EC /* ko.lproj */; };
+		7F65F6FE661C04AEEFB1B6C4B2CB4786 /* PSFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B2FC3159FCAE7C36F0A3CDCF4C663D /* PSFoundation-dummy.m */; };
+		80971024F69B9DC9D6CC0F95AD9B662A /* AbstractJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E6940816D74F9B8C28196E466EBE04E6 /* AbstractJSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		812C1AF17AC603AD90B5E5C4C5D1BFEE /* PSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499943D03C53BE4D0D0BA008AD6D90A0 /* PSFoundation.framework */; };
 		83783E013576C8C8E981A04F9296BF55 /* apxml-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B1DFD864B3960B7F91E61704B47C1D /* apxml-dummy.m */; };
-		847B68C34F8B8944F9A7E3F1324C60E4 /* DataLoadValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = E72F9E8704603DC7FF0573A85E83C416 /* DataLoadValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85089B133FB72A2C27C0533383A5BC1C /* NSArray+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC734DF3525F111B8CBC770BAB4326D /* NSArray+PSFoundation.m */; };
-		8D3325C10A149E12E4BA3FFE2EBB1D59 /* KTourApiResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7054010CEC48E00BA1260FE71DC5EE9 /* KTourApiResultModel.swift */; };
-		8F414997C616EA60B1AF7E4FB063B318 /* w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = A4997E500D15049299C1914AC30F6038 /* w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		916743475CCE084600718E6DF711D1E8 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C21B4B8D970B9896C3EBDDD439AF0F7 /* AbstractModel.m */; };
-		9322BD10ADD632FD239837E7A9BD907B /* PSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499943D03C53BE4D0D0BA008AD6D90A0 /* PSFoundation.framework */; };
-		937EF2C5223BA2561813E503269F656B /* HTTPRequestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A05F9363355AEBDD3C03D333B913B3 /* HTTPRequestObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95D130A2925E490E0308CEA84481A8DE /* HTTPActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB46A6D8D8AA99DCAB9DE4E25B5BEF82 /* HTTPActionManager.m */; };
-		9B6481CD40179B3439E42F240BE29746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
-		9BDD41126E2ECD0911D6407329A4A987 /* NSBundle+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44243A80F03D960900592628B667EB55 /* NSBundle+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84214FD00153E2A960B9E60791F31050 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
+		899952686BC4BDB5AFD5B6B74E011487 /* NSDictionary+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 30029536BCC2DB7D76C0F69E8113FAC4 /* NSDictionary+w3action.m */; };
+		8CEF8B543624C70303E06C84A8A0EDC0 /* HTTPActionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF82006872056A43ABAC0DB253507F28 /* HTTPActionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EB49AE18CDF91E2E49C601C9E8D06F5 /* apxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC2B4133DD38C0C1EA3B2AED0EF1473 /* apxml.framework */; };
+		921F8431C0A64AF7CEBD1B9C85185108 /* NSData+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = 8432D89400264C283F174B93F7F39E2F /* NSData+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922C8FAE0DEFC96A8E902CA6778662DF /* KTourApiResultCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E13B2F6B63741213EA9764C6F9C54 /* KTourApiResultCode.swift */; };
+		92D83CB4DE126FB3C73C09D85BE2709A /* AbstractModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E721F84EC0091EC4FED4F5B337531C /* AbstractModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96993D6E2A641C869122219B3D972699 /* NSFileManager+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 593E43F680C7C1DB1A1A036BC5CABB3D /* NSFileManager+PSFoundation.m */; };
 		9C3E41958ED836453F18FE31371B66E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
-		9C86C54871E08FBE8205C5AEE81B764D /* w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A07D54CEF0B7CC0A55EDC78B7FE808A /* w3action.m */; };
-		A19B01028520676CB02D829855A6E719 /* PSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499943D03C53BE4D0D0BA008AD6D90A0 /* PSFoundation.framework */; };
-		A9FEE212FB87B1E46D49CDED015EEB25 /* NSString+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EFB21851541D142C3D2ECC3BF91611 /* NSString+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC2045BFE672F8FE85EEFBE681407B2 /* KTourApiAppCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160F8F2777D6362A8BF96F3D6CA4747 /* KTourApiAppCenter.swift */; };
-		AE64FC2DC0BACF44F6DA2AFD81A527BA /* NSDictionary+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = C77180FA4979E7DE252316ED377B1A22 /* NSDictionary+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CCA8640AE6C813577F452C6EE6CC455 /* KTourApiParameterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB4CC5EA35A25939BAB34FDFD8B980 /* KTourApiParameterSet.swift */; };
+		9F1F206B430B0CF1090E20D243A5AFFD /* NSURLRequest+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 593C709C482E9F952AB9359564489625 /* NSURLRequest+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30A790E76D24066B265AF9A7CEE6031 /* PSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499943D03C53BE4D0D0BA008AD6D90A0 /* PSFoundation.framework */; };
+		A9026750C7635EC270D777A965E8DE0A /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 28DB0BE0EF7B7EA0AE135681EF592FC4 /* en.lproj */; };
 		AEEB8DBA24F17E5246CD4DAECE06F2C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
-		B0D2398458BEBCE62AFC32D8917AF899 /* w3action-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B1F5F73073B5FDB43E02EB94EE13E5 /* w3action-dummy.m */; };
-		B1A374C483B2AD615AF7D1E31FE54184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
-		B24FA17334488CC6527AD7533AF2ED60 /* NSFileManager+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 593E43F680C7C1DB1A1A036BC5CABB3D /* NSFileManager+PSFoundation.m */; };
-		B2C672A704D59B82866EFAED4B2629EA /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E043B63AF8A83ED83124563C094491EC /* ko.lproj */; };
 		B31B69A74B1FCF0CB27460A95E17D50F /* Pods-KTourApiSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6926FC10CFAE32D9B816F0D97215FB /* Pods-KTourApiSDK_Example-dummy.m */; };
 		B8594A206A3F912D6713139D96E7CE46 /* APXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A23A39EF0C96B27E7A245458256ED3 /* APXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0EB612392E5B859471ECB48346ADD60 /* NSURL+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A656EF395E8F91F23CCEAEFF17B80 /* NSURL+PSFoundation.m */; };
-		C36C6FAF1D81A90809E48DBEF9816A64 /* NSDate+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F57F05D6370D00D3272306409B1E10C /* NSDate+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB61A19256593C4D011A98225748047B /* NSBundle+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3CA8FD4F35A553C4BD7D33A6B936C /* NSBundle+PSFoundation.m */; };
-		CEAEF0072E88B455AFBCE5C100F4227A /* NSURLRequest+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 593C709C482E9F952AB9359564489625 /* NSURLRequest+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4B0E7411C8A7C2342262E5E080DE79F /* PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A225132F22ED5A09A19175177DA9B6 /* PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D524827C74399001233C1415D039D2F9 /* PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD023B4EC32FBFCF6C30D3FAE071401 /* PSFoundation.m */; };
-		DB369A9C0DFC8DC63E0CDC596D5ECC96 /* NSFileManager+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B9AEAD4E6A253E8AC709198349E49A8A /* NSFileManager+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE054321BADB708AA2ECF2054B89F3EB /* PSFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF02D3EE84374FBB7E6F30E7438B26E2 /* PSFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2A63459BE7A58955746CA3877DF03D3 /* PSFoundation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF8493EF0D50EA052C1D6D633BBFC2E8 /* PSFoundation.bundle */; };
-		E3FE35DDD4ABAF42491E015457B62766 /* w3action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF8C78FA67FAC8F3F65C3CD28CFA20B /* w3action.framework */; };
-		E718E23D5E4F368890150AFEA7852496 /* NSDate+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B30C660DCFA6770A81139BF08F723E /* NSDate+PSFoundation.m */; };
-		E9D5C38D65CFECE1CF2C69EE33A35DDD /* NSURLRequest+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6784509C10320CA13751A680EC2CA4 /* NSURLRequest+PSFoundation.m */; };
-		EA6C65AA9B7202BC0FF1E909D84EB555 /* apxml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC2B4133DD38C0C1EA3B2AED0EF1473 /* apxml.framework */; };
-		F302A3678AA12EC186E429EBB03AF7CF /* KTourApiParameterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97BD4FF01D2E9BF43DEBC3B3252FC6 /* KTourApiParameterSet.swift */; };
+		BF1218B0B0D014AD1B93B6C0EF7D2706 /* HTTPRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF33A3C326D6CA71159051BEC36AA02 /* HTTPRequestObject.m */; };
+		C498086B8DDB5AA2A63723BE8AAD8A2B /* NSURL+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F98585D8C935F2D7060944E137F17DFD /* NSURL+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5397D6441535F54448506E9E59CAF28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
+		C5C10B4BFDB84367C07CD086940A6DD6 /* w3action-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B1F5F73073B5FDB43E02EB94EE13E5 /* w3action-dummy.m */; };
+		C7366BD978CFCDD8B9236F94E4CE61E8 /* NSFileManager+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B9AEAD4E6A253E8AC709198349E49A8A /* NSFileManager+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C94AA871C202CB310DF8749473E33C1B /* w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A07D54CEF0B7CC0A55EDC78B7FE808A /* w3action.m */; };
+		D3BCDD9F4939BDB4ADFD7EC360DD67EF /* AbstractJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E74112FD7CEB8A0ED3DB296158DEA375 /* AbstractJSONModel.m */; };
+		D49BB56549A615E3CF321231C3E9945C /* HTTPRequestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A05F9363355AEBDD3C03D333B913B3 /* HTTPRequestObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7A7916310CCF7B09CCABCDD840DFA17 /* ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 91DC109A5C8234B381236045B3AB8A95 /* ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D91D7974F9D560B4D2AB2C16A7103B34 /* NSDate+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B30C660DCFA6770A81139BF08F723E /* NSDate+PSFoundation.m */; };
+		DCA6D90D9D1A74C8506A72FCC3777A33 /* model.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DF62EF60221A064D198B6C300930AC /* model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E17633A4E458F215DC2A98090ADD34DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E925E5CC394A748E2CBCFDB2765153A6 /* Foundation.framework */; };
+		E209C8319BE93B375310A8AAEC4DAF06 /* NSString+w3action.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E86863BAA1384676E19C2026909555F /* NSString+w3action.m */; };
+		E803FC12D88BC985A76AFEDD41E8EB4E /* DataLoadValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1153721BE3EFD3B51151FDAB5DCB132E /* DataLoadValidator.m */; };
+		F05506715B045E295E42C8DF070722CB /* NSObject+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C467A4A9EA09553785D1734C8C007354 /* NSObject+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F33B17AAACD764B8A6059E834E545781 /* KTourApiSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33111743FD6A03592FFA46ABCC6D440D /* KTourApiSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F469919D17212AE0F6C333A779DC36D5 /* NSDictionary+w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = C77180FA4979E7DE252316ED377B1A22 /* NSDictionary+w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5D6519125D1A6C7EF181733F04A6F2E /* NSBundle+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF3CA8FD4F35A553C4BD7D33A6B936C /* NSBundle+PSFoundation.m */; };
+		F6ED89C0173841DBF34509886DDFF814 /* w3action.h in Headers */ = {isa = PBXBuildFile; fileRef = A4997E500D15049299C1914AC30F6038 /* w3action.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F79CB239C4686BC4AB8D8050972C61EA /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9723FCDAA2A75D7ACDA2F9A9CCAC8E69 /* APDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FA28C80D82680975C877B3BAEE2C3982 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F87BAE2FF2A4CAB91D415A5AAD3142 /* APElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FBABF58FDBB318B69DB756055AD3670C /* Pods-KTourApiSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0CFC63EA19D0F9C3BE62F9A9CB2489 /* Pods-KTourApiSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCB477F03875FDA6E8228F7A4BE1FD70 /* w3action-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87E90B942D0AFAEFFE7E428EFA377285 /* w3action-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFE165B13FF3CEF52938A0F265987DF4 /* NSObject+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9DE700C3E3E47E93EDBF508619AEA0 /* NSObject+PSFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		013A3CE221972DE3A80F387B9633942C /* PBXContainerItemProxy */ = {
+		026697E3E99E1007C45BB60EF164821F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7E3981331A17653B3062FDC328E11C01;
+			remoteGlobalIDString = 0E7560F14A293A15F816EFD2DC8E98BD;
 			remoteInfo = "PSFoundation-PSFoundation";
 		};
 		23A3837856F4C52AEAEF856799666B06 /* PBXContainerItemProxy */ = {
@@ -102,61 +103,61 @@
 			remoteGlobalIDString = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED;
 			remoteInfo = apxml;
 		};
-		2837FF3A29A59333175830BEB05E9BA1 /* PBXContainerItemProxy */ = {
+		572F8D683F674E41483936D5355F9C12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BAFB5AF4F175BE7729A868CDD342ADD;
+			remoteInfo = w3action;
+		};
+		67E1216639C4D53A846199C566B161A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED;
 			remoteInfo = apxml;
 		};
-		5EE35C8FCA16005C72C51232ACE086AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 538000F507889F08B5E05BF3BCDD426B;
-			remoteInfo = PSFoundation;
-		};
-		80C99C8233882D7F627969B89D8DB753 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CCD3E5B7E2CBCC4641BC1E193F4A5D49;
-			remoteInfo = w3action;
-		};
-		AA1FAC0B89AD5BF7586A2764B965AEA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 538000F507889F08B5E05BF3BCDD426B;
-			remoteInfo = PSFoundation;
-		};
 		B0BDD4DCB75E762E871C924CE19CA404 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CCD3E5B7E2CBCC4641BC1E193F4A5D49;
+			remoteGlobalIDString = 8BAFB5AF4F175BE7729A868CDD342ADD;
 			remoteInfo = w3action;
 		};
 		B691B9D67E5AA827FD5E7E132EC3C01D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3A1954AD4BB5956C0A10C4925E60AF4B;
+			remoteGlobalIDString = 8385E4B3AEF01A6CD4CAB9439A4A3C74;
 			remoteInfo = KTourApiSDK;
 		};
-		CF346CAC6196F68D7FDCC69A40E0365C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 538000F507889F08B5E05BF3BCDD426B;
-			remoteInfo = PSFoundation;
-		};
-		E9BF9784CCFB46FF16F2033312A37FE2 /* PBXContainerItemProxy */ = {
+		C93E14F7E78A64CF06C9E68D58B432E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED;
 			remoteInfo = apxml;
+		};
+		CF346CAC6196F68D7FDCC69A40E0365C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD38138E369BB6E21F400A1DD8F5AD59;
+			remoteInfo = PSFoundation;
+		};
+		E4366F1B42A8808106B5956773BD893C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD38138E369BB6E21F400A1DD8F5AD59;
+			remoteInfo = PSFoundation;
+		};
+		F1AA11155DA190233D1A4E940FB6E826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD38138E369BB6E21F400A1DD8F5AD59;
+			remoteInfo = PSFoundation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -171,7 +172,6 @@
 		1153721BE3EFD3B51151FDAB5DCB132E /* DataLoadValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DataLoadValidator.m; path = PSFoundation/Classes/DataLoadValidator.m; sourceTree = "<group>"; };
 		162373078A03D599FDA57914CD1EBF36 /* Pods-KTourApiSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KTourApiSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1E91588996B22278F97D4FF3EB52CAD3 /* Pods-KTourApiSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KTourApiSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1E97BD4FF01D2E9BF43DEBC3B3252FC6 /* KTourApiParameterSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiParameterSet.swift; sourceTree = "<group>"; };
 		218D3AE745B7FB719189A3B37AF0F713 /* Pods-KTourApiSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KTourApiSDK_Tests-resources.sh"; sourceTree = "<group>"; };
 		2557079A9730461B51AF9D2E331F2543 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25F62859326A2872BEF894735B373021 /* apxml.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = apxml.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +182,6 @@
 		387502D3973793CF9AFB1F4FF9309D29 /* ResourceBundle-PSFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PSFoundation-Info.plist"; sourceTree = "<group>"; };
 		38A04D6DD698229E7E4510B18313DFD2 /* PSFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A07D54CEF0B7CC0A55EDC78B7FE808A /* w3action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = w3action.m; path = w3action/Classes/w3action.m; sourceTree = "<group>"; };
-		3A8531C45291BD2FA212D502C78B687D /* KTourApiSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiSDK.swift; sourceTree = "<group>"; };
 		3AC9DFE42804F910D3CC41298C43A115 /* Pods-KTourApiSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KTourApiSDK_Example-resources.sh"; sourceTree = "<group>"; };
 		41B1F5F73073B5FDB43E02EB94EE13E5 /* w3action-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "w3action-dummy.m"; sourceTree = "<group>"; };
 		44243A80F03D960900592628B667EB55 /* NSBundle+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+PSFoundation.h"; path = "PSFoundation/Classes/NSBundle+PSFoundation.h"; sourceTree = "<group>"; };
@@ -193,6 +192,7 @@
 		4E5F9521C6FFDA431899135ED6CAEE74 /* apxml-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "apxml-umbrella.h"; sourceTree = "<group>"; };
 		4E86863BAA1384676E19C2026909555F /* NSString+w3action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+w3action.m"; path = "w3action/Classes/NSString+w3action.m"; sourceTree = "<group>"; };
 		4F4ECE0BCF22E85454709A710001DDBC /* Pods_KTourApiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KTourApiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD53210D289EA742178ABAC5CAF9082 /* KTourApiSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiSDK.swift; sourceTree = "<group>"; };
 		593C709C482E9F952AB9359564489625 /* NSURLRequest+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PSFoundation.h"; path = "PSFoundation/Classes/NSURLRequest+PSFoundation.h"; sourceTree = "<group>"; };
 		593E43F680C7C1DB1A1A036BC5CABB3D /* NSFileManager+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+PSFoundation.m"; path = "PSFoundation/Classes/NSFileManager+PSFoundation.m"; sourceTree = "<group>"; };
 		59881E0E53CA3EBB0AC5319132627BF6 /* KTourApiSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KTourApiSDK-dummy.m"; sourceTree = "<group>"; };
@@ -203,7 +203,9 @@
 		5F57F05D6370D00D3272306409B1E10C /* NSDate+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PSFoundation.h"; path = "PSFoundation/Classes/NSDate+PSFoundation.h"; sourceTree = "<group>"; };
 		61F87BAE2FF2A4CAB91D415A5AAD3142 /* APElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APElement.m; sourceTree = "<group>"; };
 		6BEFF553A20622B5849FC1BA30EF17D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C156192E821D70673A933F0140F345A /* KTourApiResultModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiResultModel.swift; sourceTree = "<group>"; };
 		6E1A656EF395E8F91F23CCEAEFF17B80 /* NSURL+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PSFoundation.m"; path = "PSFoundation/Classes/NSURL+PSFoundation.m"; sourceTree = "<group>"; };
+		742E13B2F6B63741213EA9764C6F9C54 /* KTourApiResultCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiResultCode.swift; sourceTree = "<group>"; };
 		76A23A39EF0C96B27E7A245458256ED3 /* APXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APXML.h; sourceTree = "<group>"; };
 		79C213406D4E8B00527C9903319F9299 /* APDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APDocument.h; sourceTree = "<group>"; };
 		7C21B4B8D970B9896C3EBDDD439AF0F7 /* AbstractModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractModel.m; path = PSFoundation/Classes/AbstractModel.m; sourceTree = "<group>"; };
@@ -221,14 +223,14 @@
 		94D711141E30A83DE00DAA8D44D1E8DF /* BaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseObject.h; path = PSFoundation/Classes/BaseObject.h; sourceTree = "<group>"; };
 		9723FCDAA2A75D7ACDA2F9A9CCAC8E69 /* APDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = APDocument.m; sourceTree = "<group>"; };
 		99DFEF61724689736C9141D386FE30C1 /* PSFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PSFoundation.modulemap; sourceTree = "<group>"; };
+		9AFB4CC5EA35A25939BAB34FDFD8B980 /* KTourApiParameterSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiParameterSet.swift; sourceTree = "<group>"; };
 		9C890F3CB3E28E53350F72C44A5C9948 /* BaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseObject.m; path = PSFoundation/Classes/BaseObject.m; sourceTree = "<group>"; };
 		9D020B7507B5CC403937D2740FD5B391 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A160F8F2777D6362A8BF96F3D6CA4747 /* KTourApiAppCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiAppCenter.swift; sourceTree = "<group>"; };
 		A4997E500D15049299C1914AC30F6038 /* w3action.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = w3action.h; path = w3action/Classes/w3action.h; sourceTree = "<group>"; };
+		A6629C44EDC8160CEBE8FACF8CD5A989 /* KTourApiAppCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiAppCenter.swift; sourceTree = "<group>"; };
 		AE2D8277291AE221F3F3D944C8EB0BBF /* APElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = APElement.h; sourceTree = "<group>"; };
 		AF9DE700C3E3E47E93EDBF508619AEA0 /* NSObject+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PSFoundation.m"; path = "PSFoundation/Classes/NSObject+PSFoundation.m"; sourceTree = "<group>"; };
 		B3EFB21851541D142C3D2ECC3BF91611 /* NSString+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PSFoundation.h"; path = "PSFoundation/Classes/NSString+PSFoundation.h"; sourceTree = "<group>"; };
-		B7054010CEC48E00BA1260FE71DC5EE9 /* KTourApiResultModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KTourApiResultModel.swift; sourceTree = "<group>"; };
 		B79D32065BEF2BC700126A58AA1E8592 /* apxml.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = apxml.xcconfig; sourceTree = "<group>"; };
 		B9AEAD4E6A253E8AC709198349E49A8A /* NSFileManager+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+PSFoundation.h"; path = "PSFoundation/Classes/NSFileManager+PSFoundation.h"; sourceTree = "<group>"; };
 		BB0CFC63EA19D0F9C3BE62F9A9CB2489 /* Pods-KTourApiSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KTourApiSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -275,6 +277,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09A569C1D8DCAB5CD9E213F8BFDE5242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17633A4E458F215DC2A98090ADD34DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CB3A66801DA6062B9AB1F11B045B431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60C66FE9F60149AC072460CADEF4F5DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,40 +316,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE0991708356196E01A08FC9EB219FF9 /* Frameworks */ = {
+		B2EEADF69A418BE099591299F8C15C65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB49AE18CDF91E2E49C601C9E8D06F5 /* apxml.framework in Frameworks */,
+				C5397D6441535F54448506E9E59CAF28 /* Foundation.framework in Frameworks */,
+				812C1AF17AC603AD90B5E5C4C5D1BFEE /* PSFoundation.framework in Frameworks */,
+				5EA232A970CE3769241CAD0ECC780F64 /* w3action.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB6EAD55A85803A19427A3084686E795 /* Frameworks */ = {
+		DDDCBE90D617942BF70B9939BAC7D4D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6C65AA9B7202BC0FF1E909D84EB555 /* apxml.framework in Frameworks */,
-				602C9BBE74F0E22C052D488CC51F3D39 /* CFNetwork.framework in Frameworks */,
-				9B6481CD40179B3439E42F240BE29746 /* Foundation.framework in Frameworks */,
-				9322BD10ADD632FD239837E7A9BD907B /* PSFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF7AFB7F7E8C3E93B0B6664BA39B8740 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1A374C483B2AD615AF7D1E31FE54184 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F78E0C320D5A42325D020BB39D87557D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				297AE37CA4C9503E91646EF1559C49E4 /* apxml.framework in Frameworks */,
-				07FE89D4774FD6EA153AF51775E6EA3B /* Foundation.framework in Frameworks */,
-				A19B01028520676CB02D829855A6E719 /* PSFoundation.framework in Frameworks */,
-				E3FE35DDD4ABAF42491E015457B62766 /* w3action.framework in Frameworks */,
+				6CD1214D51404DB34F818A07FCF7D2F0 /* apxml.framework in Frameworks */,
+				2D3D9B2ED37789F50635C6C0134C85A4 /* CFNetwork.framework in Frameworks */,
+				84214FD00153E2A960B9E60791F31050 /* Foundation.framework in Frameworks */,
+				A30A790E76D24066B265AF9A7CEE6031 /* PSFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +355,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		0C6A17E473F98B076BCA40602E2FBCCB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6629C44EDC8160CEBE8FACF8CD5A989 /* KTourApiAppCenter.swift */,
+				9AFB4CC5EA35A25939BAB34FDFD8B980 /* KTourApiParameterSet.swift */,
+				742E13B2F6B63741213EA9764C6F9C54 /* KTourApiResultCode.swift */,
+				6C156192E821D70673A933F0140F345A /* KTourApiResultModel.swift */,
+				4FD53210D289EA742178ABAC5CAF9082 /* KTourApiSDK.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		10542A710CE03D002780EBB48F2C6F2E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,7 +379,7 @@
 		1EC8B603BA814B4CF481666E22527547 /* KTourApiSDK */ = {
 			isa = PBXGroup;
 			children = (
-				226334A41CF752C35918CDA0ECF765BC /* KTourApiSDK */,
+				81228F2F04A7F7035D631D11AD5AAE86 /* KTourApiSDK */,
 				74C2F663C9DD6DEEA7914AEC29F5745A /* Support Files */,
 			);
 			name = KTourApiSDK;
@@ -388,14 +402,6 @@
 			);
 			name = "Pods-KTourApiSDK_Example";
 			path = "Target Support Files/Pods-KTourApiSDK_Example";
-			sourceTree = "<group>";
-		};
-		226334A41CF752C35918CDA0ECF765BC /* KTourApiSDK */ = {
-			isa = PBXGroup;
-			children = (
-				3372ACC78B9C05A6C4DB7EFEE05DDCD3 /* Classes */,
-			);
-			path = KTourApiSDK;
 			sourceTree = "<group>";
 		};
 		2E947A5B7DE54AAE8DE61CAD2DDD0BC5 /* PSFoundation */ = {
@@ -433,17 +439,6 @@
 				8D096906C114A00A31ED726677E5995F /* Support Files */,
 			);
 			path = PSFoundation;
-			sourceTree = "<group>";
-		};
-		3372ACC78B9C05A6C4DB7EFEE05DDCD3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A160F8F2777D6362A8BF96F3D6CA4747 /* KTourApiAppCenter.swift */,
-				1E97BD4FF01D2E9BF43DEBC3B3252FC6 /* KTourApiParameterSet.swift */,
-				B7054010CEC48E00BA1260FE71DC5EE9 /* KTourApiResultModel.swift */,
-				3A8531C45291BD2FA212D502C78B687D /* KTourApiSDK.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		5EBEA4A51825D744C396AA45C1CF4202 /* Pods-KTourApiSDK_Tests */ = {
@@ -488,6 +483,14 @@
 				012722819179F83E2D079B42FA41C8C9 /* Products */,
 				10542A710CE03D002780EBB48F2C6F2E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		81228F2F04A7F7035D631D11AD5AAE86 /* KTourApiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A17E473F98B076BCA40602E2FBCCB /* Classes */,
+			);
+			path = KTourApiSDK;
 			sourceTree = "<group>";
 		};
 		8D096906C114A00A31ED726677E5995F /* Support Files */ = {
@@ -618,20 +621,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		13B46C19543A63BC817E3CD1FAB96A7F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7EDEBA6AF12B96DB959ABBB47CBF66C7 /* HTTPActionManager.h in Headers */,
-				937EF2C5223BA2561813E503269F656B /* HTTPRequestObject.h in Headers */,
-				753243781E1BB8F253678A8EEAD0E692 /* NSData+w3action.h in Headers */,
-				AE64FC2DC0BACF44F6DA2AFD81A527BA /* NSDictionary+w3action.h in Headers */,
-				0749D36AC0728B9100CC6ABBC9AE4FBB /* NSString+w3action.h in Headers */,
-				66C6C163DF0330F95636B98BE5C3BFE4 /* w3action-umbrella.h in Headers */,
-				8F414997C616EA60B1AF7E4FB063B318 /* w3action.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2D077625C84F4CAFB5A1F4B9F9C171BF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,29 +641,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77ACDB0F3DC9887467F91B55D01A4991 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				562CB1597F9114DBC2D8F210EAFE9A32 /* AbstractJSONModel.h in Headers */,
-				2583BCEE4A1A5558A5065E77A62BA4FC /* AbstractModel.h in Headers */,
-				2D70847E876ACFB173113FABF02B3442 /* BaseObject.h in Headers */,
-				847B68C34F8B8944F9A7E3F1324C60E4 /* DataLoadValidator.h in Headers */,
-				380942A9B120E26A5DB4F1C671DAA60A /* ext.h in Headers */,
-				4B39CBA22D9BE78F65F302A90D0D477F /* model.h in Headers */,
-				65454E9E17EA9D0F3E07FE979FB41590 /* NSArray+PSFoundation.h in Headers */,
-				9BDD41126E2ECD0911D6407329A4A987 /* NSBundle+PSFoundation.h in Headers */,
-				C36C6FAF1D81A90809E48DBEF9816A64 /* NSDate+PSFoundation.h in Headers */,
-				DB369A9C0DFC8DC63E0CDC596D5ECC96 /* NSFileManager+PSFoundation.h in Headers */,
-				73E2258CE2390DB1FDE614CFF349F9F5 /* NSObject+PSFoundation.h in Headers */,
-				A9FEE212FB87B1E46D49CDED015EEB25 /* NSString+PSFoundation.h in Headers */,
-				33B47C7C8456CCCDE80622F49DB7023C /* NSURL+PSFoundation.h in Headers */,
-				CEAEF0072E88B455AFBCE5C100F4227A /* NSURLRequest+PSFoundation.h in Headers */,
-				DE054321BADB708AA2ECF2054B89F3EB /* PSFoundation-umbrella.h in Headers */,
-				D4B0E7411C8A7C2342262E5E080DE79F /* PSFoundation.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		926C0626022769521D846C87F2670DB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -683,63 +649,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE0B20DF425012506BA978A87531B7CB /* Headers */ = {
+		E36C8E105B3834BB8D46ECF854470D4A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38EFF8AA55261FA3A84B52E161135C86 /* KTourApiSDK-umbrella.h in Headers */,
+				F33B17AAACD764B8A6059E834E545781 /* KTourApiSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB97E1CACE518FF149A0170D3B45E028 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CEF8B543624C70303E06C84A8A0EDC0 /* HTTPActionManager.h in Headers */,
+				D49BB56549A615E3CF321231C3E9945C /* HTTPRequestObject.h in Headers */,
+				921F8431C0A64AF7CEBD1B9C85185108 /* NSData+w3action.h in Headers */,
+				F469919D17212AE0F6C333A779DC36D5 /* NSDictionary+w3action.h in Headers */,
+				135796228D50F6C2CEF1DE4873FD8D4A /* NSString+w3action.h in Headers */,
+				FCB477F03875FDA6E8228F7A4BE1FD70 /* w3action-umbrella.h in Headers */,
+				F6ED89C0173841DBF34509886DDFF814 /* w3action.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE784085C76EF4376456335E036DE8E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80971024F69B9DC9D6CC0F95AD9B662A /* AbstractJSONModel.h in Headers */,
+				92D83CB4DE126FB3C73C09D85BE2709A /* AbstractModel.h in Headers */,
+				0D7C0794F1AA9FD33842634D0DB39455 /* BaseObject.h in Headers */,
+				58692D7ACEBBBD740206765FB72509A8 /* DataLoadValidator.h in Headers */,
+				D7A7916310CCF7B09CCABCDD840DFA17 /* ext.h in Headers */,
+				DCA6D90D9D1A74C8506A72FCC3777A33 /* model.h in Headers */,
+				3D2D01DE64C4218D95EFB1DC50BFBF32 /* NSArray+PSFoundation.h in Headers */,
+				5C7A65597F40F929B2538A612326F4A3 /* NSBundle+PSFoundation.h in Headers */,
+				77E443AE64DE84C061DC0E8AB26DA307 /* NSDate+PSFoundation.h in Headers */,
+				C7366BD978CFCDD8B9236F94E4CE61E8 /* NSFileManager+PSFoundation.h in Headers */,
+				F05506715B045E295E42C8DF070722CB /* NSObject+PSFoundation.h in Headers */,
+				7121D29710A948CEF96D4A5B17ADEE84 /* NSString+PSFoundation.h in Headers */,
+				C498086B8DDB5AA2A63723BE8AAD8A2B /* NSURL+PSFoundation.h in Headers */,
+				9F1F206B430B0CF1090E20D243A5AFFD /* NSURLRequest+PSFoundation.h in Headers */,
+				38844756048A6906BBDC82CFB2BCDF32 /* PSFoundation-umbrella.h in Headers */,
+				16F0C8792E4FC544032D3FD829128E1C /* PSFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3A1954AD4BB5956C0A10C4925E60AF4B /* KTourApiSDK */ = {
+		0E7560F14A293A15F816EFD2DC8E98BD /* PSFoundation-PSFoundation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA96059B9909EB27450260DD86A6B5A7 /* Build configuration list for PBXNativeTarget "KTourApiSDK" */;
+			buildConfigurationList = F4DF3BC317C260FD282A31A886DADAF4 /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */;
 			buildPhases = (
-				8C845B35340F8B845AEAEA8CEFC4D6E8 /* Sources */,
-				F78E0C320D5A42325D020BB39D87557D /* Frameworks */,
-				AE0B20DF425012506BA978A87531B7CB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				001EF5316614F07917E5DB51B2BF14E6 /* PBXTargetDependency */,
-				B0DF95CE316F28C11A529462DDBD54D2 /* PBXTargetDependency */,
-				6C134220FCAF45416377E2B76437B2F3 /* PBXTargetDependency */,
-			);
-			name = KTourApiSDK;
-			productName = KTourApiSDK;
-			productReference = FC657C927323217CE88CDD4AFE716692 /* KTourApiSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		538000F507889F08B5E05BF3BCDD426B /* PSFoundation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16DA5ADA836EB5AEDBDE930F16BEF37E /* Build configuration list for PBXNativeTarget "PSFoundation" */;
-			buildPhases = (
-				C3DDA211C4D09CA8F9F722EC99D22B58 /* Sources */,
-				CF7AFB7F7E8C3E93B0B6664BA39B8740 /* Frameworks */,
-				B96B44065F5CDD6E0B208A52AFC591F7 /* Resources */,
-				77ACDB0F3DC9887467F91B55D01A4991 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E87328C562D0E9390E9CA50E77FC423C /* PBXTargetDependency */,
-			);
-			name = PSFoundation;
-			productName = PSFoundation;
-			productReference = 38A04D6DD698229E7E4510B18313DFD2 /* PSFoundation.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7E3981331A17653B3062FDC328E11C01 /* PSFoundation-PSFoundation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1AEAA9308990EE2C60B4386C33ADB0AF /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */;
-			buildPhases = (
-				2ABB4C246843CBD30AB980C73723E672 /* Sources */,
-				AE0991708356196E01A08FC9EB219FF9 /* Frameworks */,
-				26B7EE8765772D1CF7BDFDE378382656 /* Resources */,
+				FC7A3D3DF90259E7234D0AF5F4DFEEF7 /* Sources */,
+				2CB3A66801DA6062B9AB1F11B045B431 /* Frameworks */,
+				A2F67E5527241305F58597D0E57A010A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -749,6 +713,45 @@
 			productName = "PSFoundation-PSFoundation";
 			productReference = EF8493EF0D50EA052C1D6D633BBFC2E8 /* PSFoundation.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		8385E4B3AEF01A6CD4CAB9439A4A3C74 /* KTourApiSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39D4711B88F2C745925E51E45343F292 /* Build configuration list for PBXNativeTarget "KTourApiSDK" */;
+			buildPhases = (
+				C4916D838260E0AA4BF98633293913AD /* Sources */,
+				B2EEADF69A418BE099591299F8C15C65 /* Frameworks */,
+				E36C8E105B3834BB8D46ECF854470D4A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BE5D61890455C3068C910C512D58F47 /* PBXTargetDependency */,
+				79E017DB5037862A6291E21B74D25B2D /* PBXTargetDependency */,
+				E8E58E474F8DDFADFB7A2ACE05F5CCF5 /* PBXTargetDependency */,
+			);
+			name = KTourApiSDK;
+			productName = KTourApiSDK;
+			productReference = FC657C927323217CE88CDD4AFE716692 /* KTourApiSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8BAFB5AF4F175BE7729A868CDD342ADD /* w3action */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 772A3394737C68D160D20FCBC7B04A86 /* Build configuration list for PBXNativeTarget "w3action" */;
+			buildPhases = (
+				8891626643A2A6B6766700EE911D4C93 /* Sources */,
+				DDDCBE90D617942BF70B9939BAC7D4D2 /* Frameworks */,
+				EB97E1CACE518FF149A0170D3B45E028 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDAB457D876A83EF7E0ED7D762037C79 /* PBXTargetDependency */,
+				B2E5697074138B2FAD396560F089943B /* PBXTargetDependency */,
+			);
+			name = w3action;
+			productName = w3action;
+			productReference = FD354B88C1ED153E1AAEF98B9A4B5058 /* w3action.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		8FA81ACD48140F57966F11172C961AB1 /* Pods-KTourApiSDK_Example */ = {
 			isa = PBXNativeTarget;
@@ -788,23 +791,23 @@
 			productReference = 4F4ECE0BCF22E85454709A710001DDBC /* Pods_KTourApiSDK_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CCD3E5B7E2CBCC4641BC1E193F4A5D49 /* w3action */ = {
+		AD38138E369BB6E21F400A1DD8F5AD59 /* PSFoundation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0106EC847FD68A261270199E5D8EA108 /* Build configuration list for PBXNativeTarget "w3action" */;
+			buildConfigurationList = 2C31D59E2249BB3F9A16163259B3671C /* Build configuration list for PBXNativeTarget "PSFoundation" */;
 			buildPhases = (
-				F2F6A541F25E1066084623672493E160 /* Sources */,
-				BB6EAD55A85803A19427A3084686E795 /* Frameworks */,
-				13B46C19543A63BC817E3CD1FAB96A7F /* Headers */,
+				964A7805F33F48E9312D37170D42030B /* Sources */,
+				09A569C1D8DCAB5CD9E213F8BFDE5242 /* Frameworks */,
+				AEA354B1FDD9867D1BD7069E1959CEFB /* Resources */,
+				EE784085C76EF4376456335E036DE8E5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F39015F2E80E363A7CCC83494E2F3AE0 /* PBXTargetDependency */,
-				EB48B7ECF44AE7873A1EDE4E2908A4EE /* PBXTargetDependency */,
+				DB326AD6A06EBE0E47BF001E4AA0F6B7 /* PBXTargetDependency */,
 			);
-			name = w3action;
-			productName = w3action;
-			productReference = FD354B88C1ED153E1AAEF98B9A4B5058 /* w3action.framework */;
+			name = PSFoundation;
+			productName = PSFoundation;
+			productReference = 38A04D6DD698229E7E4510B18313DFD2 /* PSFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */ = {
@@ -846,44 +849,37 @@
 			projectRoot = "";
 			targets = (
 				E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */,
-				3A1954AD4BB5956C0A10C4925E60AF4B /* KTourApiSDK */,
+				8385E4B3AEF01A6CD4CAB9439A4A3C74 /* KTourApiSDK */,
 				8FA81ACD48140F57966F11172C961AB1 /* Pods-KTourApiSDK_Example */,
 				910FEFAC55FD9DC8DEA08BFABAE471CE /* Pods-KTourApiSDK_Tests */,
-				538000F507889F08B5E05BF3BCDD426B /* PSFoundation */,
-				7E3981331A17653B3062FDC328E11C01 /* PSFoundation-PSFoundation */,
-				CCD3E5B7E2CBCC4641BC1E193F4A5D49 /* w3action */,
+				AD38138E369BB6E21F400A1DD8F5AD59 /* PSFoundation */,
+				0E7560F14A293A15F816EFD2DC8E98BD /* PSFoundation-PSFoundation */,
+				8BAFB5AF4F175BE7729A868CDD342ADD /* w3action */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		26B7EE8765772D1CF7BDFDE378382656 /* Resources */ = {
+		A2F67E5527241305F58597D0E57A010A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EF95FCCBFD2C9CA5C72D329575CD61C /* en.lproj in Resources */,
-				B2C672A704D59B82866EFAED4B2629EA /* ko.lproj in Resources */,
+				A9026750C7635EC270D777A965E8DE0A /* en.lproj in Resources */,
+				7AEE5ECFB565D3424002D7D69A7BFEBE /* ko.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B96B44065F5CDD6E0B208A52AFC591F7 /* Resources */ = {
+		AEA354B1FDD9867D1BD7069E1959CEFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A63459BE7A58955746CA3877DF03D3 /* PSFoundation.bundle in Resources */,
+				71FC00BDFEA411E0345E15405C4DE6FB /* PSFoundation.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2ABB4C246843CBD30AB980C73723E672 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53C40BF2D793042B5141EFD52693CDBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,15 +888,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C845B35340F8B845AEAEA8CEFC4D6E8 /* Sources */ = {
+		8891626643A2A6B6766700EE911D4C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC2045BFE672F8FE85EEFBE681407B2 /* KTourApiAppCenter.swift in Sources */,
-				F302A3678AA12EC186E429EBB03AF7CF /* KTourApiParameterSet.swift in Sources */,
-				8D3325C10A149E12E4BA3FFE2EBB1D59 /* KTourApiResultModel.swift in Sources */,
-				68B881C3C902952D9E7E4F9FB72B8382 /* KTourApiSDK-dummy.m in Sources */,
-				29775E5B29B4464F8AB981A3F9448C88 /* KTourApiSDK.swift in Sources */,
+				370A92160A1447517037C009D1127189 /* HTTPActionManager.m in Sources */,
+				BF1218B0B0D014AD1B93B6C0EF7D2706 /* HTTPRequestObject.m in Sources */,
+				4226528C1984D0922B7FB149BB974B1F /* NSData+w3action.m in Sources */,
+				899952686BC4BDB5AFD5B6B74E011487 /* NSDictionary+w3action.m in Sources */,
+				E209C8319BE93B375310A8AAEC4DAF06 /* NSString+w3action.m in Sources */,
+				C5C10B4BFDB84367C07CD086940A6DD6 /* w3action-dummy.m in Sources */,
+				C94AA871C202CB310DF8749473E33C1B /* w3action.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		964A7805F33F48E9312D37170D42030B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BCDD9F4939BDB4ADFD7EC360DD67EF /* AbstractJSONModel.m in Sources */,
+				125E18D88CAF065CE1CCE50A3FA55E14 /* AbstractModel.m in Sources */,
+				4397880A720D3DB62D64759DD558F0E0 /* BaseObject.m in Sources */,
+				E803FC12D88BC985A76AFEDD41E8EB4E /* DataLoadValidator.m in Sources */,
+				26FA967DCEFF2C519BA4508AC97C3468 /* NSArray+PSFoundation.m in Sources */,
+				F5D6519125D1A6C7EF181733F04A6F2E /* NSBundle+PSFoundation.m in Sources */,
+				D91D7974F9D560B4D2AB2C16A7103B34 /* NSDate+PSFoundation.m in Sources */,
+				96993D6E2A641C869122219B3D972699 /* NSFileManager+PSFoundation.m in Sources */,
+				FFE165B13FF3CEF52938A0F265987DF4 /* NSObject+PSFoundation.m in Sources */,
+				1D6F66A207F46F89D8A0E79068774666 /* NSString+PSFoundation.m in Sources */,
+				71C99C092F2138A37C4C1B8C2459E16E /* NSURL+PSFoundation.m in Sources */,
+				315D0218229E932DA6FDA4D57D1EF92F /* NSURLRequest+PSFoundation.m in Sources */,
+				7F65F6FE661C04AEEFB1B6C4B2CB4786 /* PSFoundation-dummy.m in Sources */,
+				4F9673E845136F1C98F1EBCAC42A054A /* PSFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,24 +934,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3DDA211C4D09CA8F9F722EC99D22B58 /* Sources */ = {
+		C4916D838260E0AA4BF98633293913AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				675D8E46309E326C1DD356BD55E21968 /* AbstractJSONModel.m in Sources */,
-				916743475CCE084600718E6DF711D1E8 /* AbstractModel.m in Sources */,
-				1A5F6639C65D4F2D7F67983D777FD140 /* BaseObject.m in Sources */,
-				63D28A0C6FC1A441BDAB106AD8B1898E /* DataLoadValidator.m in Sources */,
-				85089B133FB72A2C27C0533383A5BC1C /* NSArray+PSFoundation.m in Sources */,
-				CB61A19256593C4D011A98225748047B /* NSBundle+PSFoundation.m in Sources */,
-				E718E23D5E4F368890150AFEA7852496 /* NSDate+PSFoundation.m in Sources */,
-				B24FA17334488CC6527AD7533AF2ED60 /* NSFileManager+PSFoundation.m in Sources */,
-				25439842B6BF76D5C1CC1052DBFB8F06 /* NSObject+PSFoundation.m in Sources */,
-				314E89091E53A8B7AAC04EC9B747AA41 /* NSString+PSFoundation.m in Sources */,
-				C0EB612392E5B859471ECB48346ADD60 /* NSURL+PSFoundation.m in Sources */,
-				E9D5C38D65CFECE1CF2C69EE33A35DDD /* NSURLRequest+PSFoundation.m in Sources */,
-				61C18775D4F27D4231AE2CA5E84AA47A /* PSFoundation-dummy.m in Sources */,
-				D524827C74399001233C1415D039D2F9 /* PSFoundation.m in Sources */,
+				4CCB28A66F101BA0D4CA3048C36438EF /* KTourApiAppCenter.swift in Sources */,
+				9CCA8640AE6C813577F452C6EE6CC455 /* KTourApiParameterSet.swift in Sources */,
+				922C8FAE0DEFC96A8E902CA6778662DF /* KTourApiResultCode.swift in Sources */,
+				418EB515970D3B44A0D5FC40C8C653F5 /* KTourApiResultModel.swift in Sources */,
+				36832D68B9E7FBEA4FB9F9F7765231E1 /* KTourApiSDK-dummy.m in Sources */,
+				4C8FAF1D3CD786EEF5E7908304CF6669 /* KTourApiSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,93 +955,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2F6A541F25E1066084623672493E160 /* Sources */ = {
+		FC7A3D3DF90259E7234D0AF5F4DFEEF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D130A2925E490E0308CEA84481A8DE /* HTTPActionManager.m in Sources */,
-				4CE4139462EC8647E559CE92260B30CA /* HTTPRequestObject.m in Sources */,
-				0F7135BC25838A5BCACE73F98979377A /* NSData+w3action.m in Sources */,
-				17E8838EFFB9FDF1D971FF29127088C7 /* NSDictionary+w3action.m in Sources */,
-				4350AC80C1007010BDDAFB823F54993B /* NSString+w3action.m in Sources */,
-				B0D2398458BEBCE62AFC32D8917AF899 /* w3action-dummy.m in Sources */,
-				9C86C54871E08FBE8205C5AEE81B764D /* w3action.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		001EF5316614F07917E5DB51B2BF14E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PSFoundation;
-			target = 538000F507889F08B5E05BF3BCDD426B /* PSFoundation */;
-			targetProxy = AA1FAC0B89AD5BF7586A2764B965AEA5 /* PBXContainerItemProxy */;
-		};
 		475B4CF46F209D01FC012481555F193C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = apxml;
 			target = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */;
 			targetProxy = 23A3837856F4C52AEAEF856799666B06 /* PBXContainerItemProxy */;
 		};
-		6C134220FCAF45416377E2B76437B2F3 /* PBXTargetDependency */ = {
+		4BE5D61890455C3068C910C512D58F47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = w3action;
-			target = CCD3E5B7E2CBCC4641BC1E193F4A5D49 /* w3action */;
-			targetProxy = 80C99C8233882D7F627969B89D8DB753 /* PBXContainerItemProxy */;
+			name = PSFoundation;
+			target = AD38138E369BB6E21F400A1DD8F5AD59 /* PSFoundation */;
+			targetProxy = E4366F1B42A8808106B5956773BD893C /* PBXContainerItemProxy */;
+		};
+		79E017DB5037862A6291E21B74D25B2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = apxml;
+			target = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */;
+			targetProxy = C93E14F7E78A64CF06C9E68D58B432E9 /* PBXContainerItemProxy */;
 		};
 		82AA186A43C01D71C444E3DC35E68337 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PSFoundation;
-			target = 538000F507889F08B5E05BF3BCDD426B /* PSFoundation */;
+			target = AD38138E369BB6E21F400A1DD8F5AD59 /* PSFoundation */;
 			targetProxy = CF346CAC6196F68D7FDCC69A40E0365C /* PBXContainerItemProxy */;
 		};
 		948598F406221B4314283A88BAEBB4EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KTourApiSDK;
-			target = 3A1954AD4BB5956C0A10C4925E60AF4B /* KTourApiSDK */;
+			target = 8385E4B3AEF01A6CD4CAB9439A4A3C74 /* KTourApiSDK */;
 			targetProxy = B691B9D67E5AA827FD5E7E132EC3C01D /* PBXContainerItemProxy */;
 		};
 		AA00426A6FCADA39906945EDC494B30D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = w3action;
-			target = CCD3E5B7E2CBCC4641BC1E193F4A5D49 /* w3action */;
+			target = 8BAFB5AF4F175BE7729A868CDD342ADD /* w3action */;
 			targetProxy = B0BDD4DCB75E762E871C924CE19CA404 /* PBXContainerItemProxy */;
 		};
-		B0DF95CE316F28C11A529462DDBD54D2 /* PBXTargetDependency */ = {
+		B2E5697074138B2FAD396560F089943B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = apxml;
 			target = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */;
-			targetProxy = E9BF9784CCFB46FF16F2033312A37FE2 /* PBXContainerItemProxy */;
+			targetProxy = 67E1216639C4D53A846199C566B161A3 /* PBXContainerItemProxy */;
 		};
-		E87328C562D0E9390E9CA50E77FC423C /* PBXTargetDependency */ = {
+		DB326AD6A06EBE0E47BF001E4AA0F6B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "PSFoundation-PSFoundation";
-			target = 7E3981331A17653B3062FDC328E11C01 /* PSFoundation-PSFoundation */;
-			targetProxy = 013A3CE221972DE3A80F387B9633942C /* PBXContainerItemProxy */;
+			target = 0E7560F14A293A15F816EFD2DC8E98BD /* PSFoundation-PSFoundation */;
+			targetProxy = 026697E3E99E1007C45BB60EF164821F /* PBXContainerItemProxy */;
 		};
-		EB48B7ECF44AE7873A1EDE4E2908A4EE /* PBXTargetDependency */ = {
+		E8E58E474F8DDFADFB7A2ACE05F5CCF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = apxml;
-			target = E27FA0BFB9BE3AFBC6FD6D888F8CD0ED /* apxml */;
-			targetProxy = 2837FF3A29A59333175830BEB05E9BA1 /* PBXContainerItemProxy */;
+			name = w3action;
+			target = 8BAFB5AF4F175BE7729A868CDD342ADD /* w3action */;
+			targetProxy = 572F8D683F674E41483936D5355F9C12 /* PBXContainerItemProxy */;
 		};
-		F39015F2E80E363A7CCC83494E2F3AE0 /* PBXTargetDependency */ = {
+		EDAB457D876A83EF7E0ED7D762037C79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PSFoundation;
-			target = 538000F507889F08B5E05BF3BCDD426B /* PSFoundation */;
-			targetProxy = 5EE35C8FCA16005C72C51232ACE086AE /* PBXContainerItemProxy */;
+			target = AD38138E369BB6E21F400A1DD8F5AD59 /* PSFoundation */;
+			targetProxy = F1AA11155DA190233D1A4E940FB6E826 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1ACD8FFF16EBD2D8454A197EF19E6382 /* Release */ = {
+		0080C9E16C751A3F297220991860F82E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1043,7 +1047,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PSFoundation/PSFoundation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = PSFoundation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1051,7 +1055,65 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Debug;
+		};
+		0BAE55CC488626B00D0C5125A30B85B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E463541CE3A504AA611DE09424A2CE2E /* KTourApiSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KTourApiSDK/KTourApiSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KTourApiSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KTourApiSDK/KTourApiSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KTourApiSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
 			name = Release;
+		};
+		0E1036CE2519033B6A1EF9A6C174A9E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9463EB11DE165E983BAF26F9EA8EA22 /* w3action.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/w3action/w3action-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/w3action/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/w3action/w3action.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = w3action;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		1C644EA777515C3B46D1E08E83C1D2ED /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1086,23 +1148,6 @@
 			};
 			name = Release;
 		};
-		213648AEAE3B54C1DAD2704DFA8DEAE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PSFoundation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		26BDD17C58E0D40578D0956570CAD4F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8276DDD089AECBFB5625DF6DCEF8355E /* Pods-KTourApiSDK_Tests.debug.xcconfig */;
@@ -1135,35 +1180,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		36B6560969FE22C2EA283A4D4DED8A76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9463EB11DE165E983BAF26F9EA8EA22 /* w3action.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/w3action/w3action-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/w3action/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/w3action/w3action.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = w3action;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1207,20 +1223,61 @@
 			};
 			name = Debug;
 		};
-		4F602DEE3406F113B53C524C87D07BA4 /* Release */ = {
+		4F03B2DF79A37F14C0B5A7D894454E4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PSFoundation/PSFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PSFoundation/PSFoundation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = PSFoundation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		529E767B1527D6EDC52F2B918E14387A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9463EB11DE165E983BAF26F9EA8EA22 /* w3action.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/w3action/w3action-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/w3action/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/w3action/w3action.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = w3action;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1255,6 +1312,40 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6F87790418754FE0E93BAF2806940C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7B50B90E1073293DA50448C051929F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1319,36 +1410,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		9F56D13825D7889B294C228CF1AEE3C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E463541CE3A504AA611DE09424A2CE2E /* KTourApiSDK.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/KTourApiSDK/KTourApiSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KTourApiSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KTourApiSDK/KTourApiSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = KTourApiSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		AAD381EB3335ED2A8401C6804684CB10 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1417,71 +1478,13 @@
 			};
 			name = Release;
 		};
-		E1B526FAC0FD03DE72592443175BF121 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F549652245FDE53B8CC436CD44C533 /* PSFoundation.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PSFoundation/PSFoundation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PSFoundation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PSFoundation/PSFoundation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PSFoundation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F933413292858FAA5A1A65EAF185D047 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9463EB11DE165E983BAF26F9EA8EA22 /* w3action.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/w3action/w3action-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/w3action/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/w3action/w3action.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = w3action;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F9C412008433EF7A17C68094CCBFFA35 /* Release */ = {
+		FC7EFE53FAA1A49A7E34FE991F974125 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E463541CE3A504AA611DE09424A2CE2E /* KTourApiSDK.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1494,42 +1497,25 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KTourApiSDK/KTourApiSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = KTourApiSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0106EC847FD68A261270199E5D8EA108 /* Build configuration list for PBXNativeTarget "w3action" */ = {
+		2C31D59E2249BB3F9A16163259B3671C /* Build configuration list for PBXNativeTarget "PSFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F933413292858FAA5A1A65EAF185D047 /* Debug */,
-				36B6560969FE22C2EA283A4D4DED8A76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16DA5ADA836EB5AEDBDE930F16BEF37E /* Build configuration list for PBXNativeTarget "PSFoundation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1B526FAC0FD03DE72592443175BF121 /* Debug */,
-				1ACD8FFF16EBD2D8454A197EF19E6382 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1AEAA9308990EE2C60B4386C33ADB0AF /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				213648AEAE3B54C1DAD2704DFA8DEAE9 /* Debug */,
-				4F602DEE3406F113B53C524C87D07BA4 /* Release */,
+				0080C9E16C751A3F297220991860F82E /* Debug */,
+				4F03B2DF79A37F14C0B5A7D894454E4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1552,6 +1538,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		39D4711B88F2C745925E51E45343F292 /* Build configuration list for PBXNativeTarget "KTourApiSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC7EFE53FAA1A49A7E34FE991F974125 /* Debug */,
+				0BAE55CC488626B00D0C5125A30B85B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		58D398D6E17586F888D481974BE8E32D /* Build configuration list for PBXNativeTarget "apxml" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1561,11 +1556,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA96059B9909EB27450260DD86A6B5A7 /* Build configuration list for PBXNativeTarget "KTourApiSDK" */ = {
+		772A3394737C68D160D20FCBC7B04A86 /* Build configuration list for PBXNativeTarget "w3action" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F56D13825D7889B294C228CF1AEE3C2 /* Debug */,
-				F9C412008433EF7A17C68094CCBFFA35 /* Release */,
+				0E1036CE2519033B6A1EF9A6C174A9E9 /* Debug */,
+				529E767B1527D6EDC52F2B918E14387A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4DF3BC317C260FD282A31A886DADAF4 /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B50B90E1073293DA50448C051929F51 /* Debug */,
+				6F87790418754FE0E93BAF2806940C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

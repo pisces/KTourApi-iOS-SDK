@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/*.*'
 
-  s.dependency 'PSFoundation'
   s.dependency 'w3action'
 
 end

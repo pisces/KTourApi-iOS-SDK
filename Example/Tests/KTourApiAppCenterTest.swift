@@ -27,7 +27,7 @@ class KTourApiAppCenterTest: XCTestCase {
     }
     
     func testGetServiceKey() {
-        let serviceKey: String = "JzlmZb9e3Cj5lOzZt3gUg5JXFDv0Oy6VfzYlCjXL6jSJC9tBkF6n5%2BF8Ab5dmU6QZmceUbqpXRa3JMryHM3I%2FQ%3D%3D".stringByRemovingPercentEncoding!
+        let serviceKey: String = "Your Service Key".stringByRemovingPercentEncoding!
         
         XCTAssertNotNil(KTourApiAppCenter.defaultCenter().serviceKey)
         XCTAssertEqual(serviceKey, KTourApiAppCenter.defaultCenter().serviceKey)
@@ -65,7 +65,7 @@ class KTourApiAppCenterTest: XCTestCase {
         KTourApiAppCenter.defaultCenter().call(
             path: KTourApiPath.CategoryCode,
             params: KTourApiParameterSet.CategoryCode(numOfRows: 10, pageNo: 1, contentTypeId: nil, cat1: nil, cat2: nil, cat3: nil),
-            completion: {(result: KTourApiResult<KTourApiResultItem.Area>?, error:NSError?) -> Void in
+            completion: {(result: KTourApiResult<KTourApiResultItem.Category>?, error:NSError?) -> Void in
                 XCTAssertNotNil(result)
                 XCTAssertNil(error)
                 
@@ -74,7 +74,7 @@ class KTourApiAppCenterTest: XCTestCase {
 //                        print("item ->", item.dictionary)
                         
                         XCTAssertNotNil(item)
-                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.Area.self))
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.Category.self))
                     }
                 }
                 
@@ -240,21 +240,71 @@ class KTourApiAppCenterTest: XCTestCase {
         }
     }
     
+    func testCallDetailInfo() {
+        let expectation = expectationWithDescription("testCallDetailInfo")
+        
+        KTourApiAppCenter.defaultCenter().call(
+            path: KTourApiPath.DetailInfo,
+            params: KTourApiParameterSet.DetailInfo(contentId: 1342755, contentTypeId: "82"),
+            completion: {(result: KTourApiResult<KTourApiResultItem.POIDetailInfo>?, error:NSError?) -> Void in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if result!.items != nil {
+                    for item in result!.items! {
+                        //                        print("item ->", item.dictionary)
+                        XCTAssertNotNil(item)
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIDetailInfo.self))
+                    }
+                }
+                
+                expectation.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(10) { error in
+        }
+    }
+    
+    func testCallDetailImage() {
+        let expectation = expectationWithDescription("testCallDetailImage")
+        
+        KTourApiAppCenter.defaultCenter().call(
+            path: KTourApiPath.DetailImage,
+            params: KTourApiParameterSet.DetailImage(contentId: 1342755, contentTypeId: "82"),
+            completion: {(result: KTourApiResult<KTourApiResultItem.POIDetailImage>?, error:NSError?) -> Void in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if result!.items != nil {
+                    for item in result!.items! {
+//                        print("item ->", item.dictionary)
+                        XCTAssertNotNil(item)
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIDetailImage.self))
+                    }
+                }
+                
+                expectation.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(10) { error in
+        }
+    }
+    
     func testCallDetailIntro() {
         let expectation = expectationWithDescription("testCallDetailIntro")
         
         KTourApiAppCenter.defaultCenter().call(
             path: KTourApiPath.DetailIntro,
             params: KTourApiParameterSet.DetailIntro(contentId: 1342755, contentTypeId: "82"),
-            completion: {(result: KTourApiResult<KTourApiResultItem.POIIntro>?, error:NSError?) -> Void in
+            completion: {(result: KTourApiResult<KTourApiResultItem.POIDetailIntro>?, error:NSError?) -> Void in
                 XCTAssertNotNil(result)
                 XCTAssertNil(error)
                 
                 if result!.items != nil {
                     for item in result!.items! {
-                        print("item ->", item.dictionary)
+//                        print("item ->", item.dictionary)
                         XCTAssertNotNil(item)
-                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIIntro.self))
+                        XCTAssertTrue(item.isKindOfClass(KTourApiResultItem.POIDetailIntro.self))
                     }
                 }
                 

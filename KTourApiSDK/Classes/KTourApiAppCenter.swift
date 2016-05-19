@@ -49,14 +49,12 @@ class KTourApiAppCenter: NSObject {
     // ================================================================================================
     
     override init() {
-        serviceKey = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as? String;
-        
-        if serviceKey == nil {
+        if let serviceKey: String = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as! String {
+            self.serviceKey = serviceKey.stringByRemovingPercentEncoding
+        } else {
             #if DEBUG
                 print("KTourApiServiceKey does not exist in info plist file!")
             #endif
-        } else {
-            serviceKey = serviceKey?.stringByRemovingPercentEncoding
         }
     }
     
@@ -86,7 +84,11 @@ class KTourApiAppCenter: NSObject {
                         let model: KTourApiResult = KTourApiResult<Y>(object: result)
                         
                         dispatch_async(dispatch_get_main_queue()) {
-                            completion!(result: model, error: nil)
+                            if (model.resultCode == KTourApiResultCode.NORMAL_CODE) {
+                                completion!(result: model, error: nil)
+                            } else {
+                                completion!(result: model, error: NSError(domain: KTourApiGetErrorDomain(model.resultCode), code: model.resultCode.rawValue, userInfo: nil))
+                            }
                         }
                     }
                 }

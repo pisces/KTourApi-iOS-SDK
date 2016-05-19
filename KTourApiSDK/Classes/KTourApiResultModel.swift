@@ -24,34 +24,46 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     override func setProperties(object: AnyObject?) {
         super.setProperties(object)
         
-        if let dict: NSDictionary = object as? NSDictionary {
+        if let dict: NSDictionary = object as! NSDictionary {
             if let header = dict["response"]!["header"]! {
-                resultCode = header.valueForKey("resultCode") as? String
+                if let resultCode = header["resultCode"]! {
+                    self.resultCode = KTourApiResultCode(rawValue: resultCode.integerValue)!
+                }
+                
                 resultMsg = header.valueForKey("resultMsg") as? String
+                
+                if (self.resultCode == KTourApiResultCode.NORMAL_CODE) {
+                    parseBody(dictionary: dict)
+                }
+            }
+        }
+    }
+    
+    // ================================================================================================
+    //  Private methods
+    // ================================================================================================
+    
+    func parseBody(dictionary aDict: NSDictionary) -> Void {
+        if let body = aDict["response"]!["body"]! {
+            if let numOfRows = body["numOfRows"]! {
+                self.numOfRows = numOfRows.integerValue
             }
             
-            if let body = dict["response"]!["body"]! {
-                if let numOfRows = body["numOfRows"]! {
-                    print("numOfRows", numOfRows)
-                    self.numOfRows = numOfRows.integerValue
-                }
-                
-                if let pageNo = body["pageNo"]! {
-                    self.pageNo = pageNo.integerValue
-                }
-                
-                if let totalCount = body["totalCount"]! {
-                    self.totalCount = totalCount.integerValue
-                }
-                
-                if let items = body["items"]! {
-                    if !items.isEmpty {
-                        if let item: AnyObject = items["item"]! {
-                            if (item.isKindOfClass(NSArray.self)) {
-                                self.items = self.childWithArray(item as? Array, classType: T.self) as? Array
-                            } else if (item.isKindOfClass(NSDictionary.self)) {
-                                self.items = [T(object: item)]
-                            }
+            if let pageNo = body["pageNo"]! {
+                self.pageNo = pageNo.integerValue
+            }
+            
+            if let totalCount = body["totalCount"]! {
+                self.totalCount = totalCount.integerValue
+            }
+            
+            if let items = body["items"]! {
+                if !items.isEmpty {
+                    if let item: AnyObject = items["item"]! {
+                        if (item.isKindOfClass(NSArray.self)) {
+                            self.items = self.childWithArray(item as? Array, classType: T.self) as? Array
+                        } else if (item.isKindOfClass(NSDictionary.self)) {
+                            self.items = [T(object: item)]
                         }
                     }
                 }
@@ -66,19 +78,31 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     var numOfRows: Int = 0
     var pageNo: Int = 0
     var totalCount: Int = 0
-    var resultCode: String?
+    var resultCode: KTourApiResultCode = KTourApiResultCode.UNKNOWN_ERROR
     var resultMsg: String?
     var items: Array<T>?
 }
 
 class KTourApiResultItem {
-    class Area: AbstractJSONModel {
+    class Code: AbstractJSONModel {
         var rnum: Int = 0
-        var code: String?
         var name: String?
     }
     
-    class POI: AbstractJSONModel {
+    class Area: Code {
+        var code: Int = 0
+    }
+    
+    class Category: Code {
+        var code: String?
+    }
+    
+    class POIBase: AbstractJSONModel {
+        var contentid: Int = 0
+        var contentidtype: Int = 0
+    }
+    
+    class POI: POIBase {
         // ================================================================================================
         //  Overridden: AbstractJSONModel
         // ================================================================================================
@@ -110,8 +134,6 @@ class KTourApiResultItem {
         var mapx: Float?
         var mapy: Float?
         var areacode: Int = 0
-        var contentid: Int = 0
-        var contentidtype: Int = 0
         var dist: Int = 0
         var masterid: Int = 0
         var mlvel: Int?
@@ -147,9 +169,14 @@ class KTourApiResultItem {
         var overview: String?
     }
     
-    class POIIntro: AbstractJSONModel {
-        var contentid: Int = 0
-        var contenttypeid: Int = 0
+    class POIDetailInfo: POIBase {
+        var fldgubun: Int = 0
+        var serialnum: Int = 0
+        var infoname: String?
+        var infotext: String?
+    }
+    
+    class POIDetailIntro: POIBase {
         var firstmenu: String?
         var infocenterfood: String?
         var opentimefood: String?
@@ -158,5 +185,12 @@ class KTourApiResultItem {
         var restdatefood: String?
         var smoking: String?
         var treatmenu: String?
+    }
+    
+    class POIDetailImage: POIBase {
+        var imagename: String?
+        var originimgurl: String?
+        var serialnum: String?
+        var smallimageurl: String?
     }
 }
