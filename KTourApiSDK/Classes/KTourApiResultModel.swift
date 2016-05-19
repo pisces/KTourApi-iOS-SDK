@@ -24,7 +24,7 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     override func setProperties(object: AnyObject?) {
         super.setProperties(object)
         
-        if let dict: NSDictionary = object as! NSDictionary {
+        if let dict: NSDictionary = object as? NSDictionary {
             if let header = dict["response"]!["header"]! {
                 resultCode = header.valueForKey("resultCode") as? String
                 resultMsg = header.valueForKey("resultMsg") as? String
@@ -63,19 +63,19 @@ class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     //  getter/setter
     // ================================================================================================
     
-    public private(set) var numOfRows: Int = 0
-    public private(set) var pageNo: Int = 0
-    public private(set) var totalCount: Int = 0
-    public private(set) var resultCode: String?
-    public private(set) var resultMsg: String?
-    public private(set) var items: Array<T>?
+    var numOfRows: Int = 0
+    var pageNo: Int = 0
+    var totalCount: Int = 0
+    var resultCode: String?
+    var resultMsg: String?
+    var items: Array<T>?
 }
 
 class KTourApiResultItem {
     class Area: AbstractJSONModel {
-        public private(set) var rnum: Int = 0
-        public private(set) var code: NSString?
-        public private(set) var name: String?
+        var rnum: Int = 0
+        var code: String?
+        var name: String?
     }
     
     class POI: AbstractJSONModel {
@@ -107,56 +107,56 @@ class KTourApiResultItem {
         //  getter/setter
         // ================================================================================================
         
-        public private(set) var mapx: Float?
-        public private(set) var mapy: Float?
-        public private(set) var areacode: Int = 0
-        public private(set) var contentid: Int = 0
-        public private(set) var contentidtype: Int = 0
-        public private(set) var dist: Int = 0
-        public private(set) var masterid: Int = 0
-        public private(set) var mlvel: Int?
-        public private(set) var readcount: Int = 0
-        public private(set) var sigungucode: Int = 0
-        public private(set) var addr1: String?
-        public private(set) var addr2: String?
-        public private(set) var cat1: String?
-        public private(set) var cat2: String?
-        public private(set) var cat3: String?
-        public private(set) var tel: String?
-        public private(set) var title: String?
-        public private(set) var firstiamge: String?
-        public private(set) var firstiamge2: String?
-        public private(set) var zipcode: String?
-        public private(set) var createdtime: NSDate?
-        public private(set) var modifiedtime: NSDate?
+        var mapx: Float?
+        var mapy: Float?
+        var areacode: Int = 0
+        var contentid: Int = 0
+        var contentidtype: Int = 0
+        var dist: Int = 0
+        var masterid: Int = 0
+        var mlvel: Int?
+        var readcount: Int = 0
+        var sigungucode: Int = 0
+        var addr1: String?
+        var addr2: String?
+        var cat1: String?
+        var cat2: String?
+        var cat3: String?
+        var tel: String?
+        var title: String?
+        var firstiamge: String?
+        var firstiamge2: String?
+        var zipcode: String?
+        var createdtime: NSDate?
+        var modifiedtime: NSDate?
     }
     
     class FestivalPOI: POI {
-        public private(set) var eventstartdate: NSDate?
-        public private(set) var eventenddate: NSDate?
+        var eventstartdate: NSDate?
+        var eventenddate: NSDate?
     }
     
     class StayPOI: POI {
-        public private(set) var hanok: Bool = false
-        public private(set) var benikia: Bool = false
-        public private(set) var goodstay: Bool = false
+        var hanok: Bool = false
+        var benikia: Bool = false
+        var goodstay: Bool = false
     }
     
     class POIDetail: POI {
-        public private(set) var dongcode: Int = 0
-        public private(set) var overview: String?
+        var dongcode: Int = 0
+        var overview: String?
     }
     
     class POIIntro: AbstractJSONModel {
-        public private(set) var contentid: Int = 0
-        public private(set) var contenttypeid: String?
-        public private(set) var firstmenu: String?
-        public private(set) var infocenterfood: String?
-        public private(set) var opentimefood: String?
-        public private(set) var parkingfood: String?
-        public private(set) var reservationfood: String?
-        public private(set) var restdatefood: String?
-        public private(set) var smoking: String?
-        public private(set) var treatmenu: String?
+        var contentid: Int = 0
+        var contenttypeid: Int = 0
+        var firstmenu: String?
+        var infocenterfood: String?
+        var opentimefood: String?
+        var parkingfood: String?
+        var reservationfood: String?
+        var restdatefood: String?
+        var smoking: String?
+        var treatmenu: String?
     }
 }

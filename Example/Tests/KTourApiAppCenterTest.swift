@@ -241,7 +241,7 @@ class KTourApiAppCenterTest: XCTestCase {
     }
     
     func testCallDetailIntro() {
-        let expectation = expectationWithDescription("testCallDetailInfo")
+        let expectation = expectationWithDescription("testCallDetailIntro")
         
         KTourApiAppCenter.defaultCenter().call(
             path: KTourApiPath.DetailIntro,
@@ -250,9 +250,6 @@ class KTourApiAppCenterTest: XCTestCase {
                 XCTAssertNotNil(result)
                 XCTAssertNil(error)
                 
-                print("result?.sourceObject", result?.sourceObject)
-                
-                return
                 if result!.items != nil {
                     for item in result!.items! {
                         print("item ->", item.dictionary)
