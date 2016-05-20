@@ -59,10 +59,12 @@ public class KTourApiAppCenter: NSObject {
     // ================================================================================================
     
     override init() {
-        if let serviceKey: String = (NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as! String) {
+        if let serviceKey: String = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as! String {
             self.serviceKey = serviceKey.stringByRemovingPercentEncoding
         } else {
-            print("KTourApiServiceKey does not exist in info plist file!")
+            #if DEBUG
+                print("KTourApiServiceKey does not exist in info plist file!")
+            #endif
         }
     }
     
