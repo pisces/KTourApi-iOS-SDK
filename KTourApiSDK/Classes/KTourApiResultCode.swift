@@ -67,5 +67,4 @@ func KTourApiGetErrorDomain(resultCode: KTourApiResultCode) -> String {
     default:
         return ""
     }
-    return ""
 }
