@@ -43,8 +43,10 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
         get {
             var array: Array<String> = []
             
-            for item: AnyObject in self.items! {
-                array.append(item.dictionary.description)
+            if self.items != nil {
+                for item: AnyObject in self.items! {
+                    array.append(item.dictionary.description)
+                }
             }
             
             return self.dictionary.description + "\r\n" + array.joinWithSeparator(",\r\n")

@@ -51,7 +51,7 @@ KTourApiAppCenter.defaultCenter().call(
     path: KTourApiPath.LocationBasedList,
     params: KTourApiParameterSet.LocationBasedList(numOfRows: 10, pageNo: 1, contentTypeId: nil, mapX: 126.981611, mapY: 37.568477),
     completion: {(result: KTourApiResult<KTourApiResultItem.POI>?, error:NSError?) -> Void in
-    	print("result ->", result?.description)
+    	print("result, error ->", result?.description, error?.description)
 })
 ```
 

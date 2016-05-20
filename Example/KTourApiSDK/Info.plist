@@ -36,7 +36,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>KTourApiServiceKey</key>
-	<string>JzlmZb9e3Cj5lOzZt3gUg5JXFDv0Oy6VfzYlCjXL6jSJC9tBkF6n5%2BF8Ab5dmU6QZmceUbqpXRa3JMryHM3I%2FQ%3D%3D</string>
+	<string>Your Service Key</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
