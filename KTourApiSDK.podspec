@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = "KTourApiSDK is open source iOS sdk to use Korea Tour Api."
 
-  s.homepage         = "https://github.com/pisces/KTourApiSDK"
+  s.homepage         = "https://github.com/pisces/KTourApi-iOS-SDK"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "pisces" => "hh963103@gmail.com" }
-  s.source           = { :git => "https://github.com/pisces/KTourApiSDK.git", :tag => s.
+  s.source           = { :git => "https://github.com/pisces/KTourApi-iOS-SDK.git", :tag => s.
   version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
