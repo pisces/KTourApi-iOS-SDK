@@ -48,11 +48,12 @@ Add or replace node below to you app info plist.
 #### Example for API Call
 ```swift
 KTourApiAppCenter.defaultCenter().call(
-    path: KTourApiPath.AreaBasedList,
+    path: KTourApiPath.LocationBasedList,
     params: KTourApiParameterSet.LocationBasedList(numOfRows: 10, pageNo: 1, contentTypeId: nil, mapX: 126.981611, mapY: 37.568477),
     completion: {(result: KTourApiResult<KTourApiResultItem.POI>?, error:NSError?) -> Void in
     	print("result ->", result?.description)
 })
+```
 
 #### API Paths
 ```swift

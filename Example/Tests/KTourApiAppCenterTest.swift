@@ -115,7 +115,7 @@ class KTourApiAppCenterTest: XCTestCase {
         let expectation = expectationWithDescription("testCallLocationBasedList")
         
         KTourApiAppCenter.defaultCenter().call(
-            path: KTourApiPath.AreaBasedList,
+            path: KTourApiPath.LocationBasedList,
             params: KTourApiParameterSet.LocationBasedList(numOfRows: 10, pageNo: 1, contentTypeId: nil, mapX: 126.981611, mapY: 37.568477),
             completion: {(result: KTourApiResult<KTourApiResultItem.POI>?, error:NSError?) -> Void in
                 XCTAssertNotNil(result)
