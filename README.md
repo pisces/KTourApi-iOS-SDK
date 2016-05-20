@@ -1,5 +1,9 @@
 # KTourApi-iOS-SDK
 
+KTourApiSDK는 한국관광공사 TourApi SDK 입니다.
+
+KTourApiSDK is open source iOS SDK to use Korea Tour Api.
+
 [![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApi-iOS-SDK)
 [![Version](https://img.shields.io/cocoapods/v/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 [![License](https://img.shields.io/cocoapods/l/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
@@ -20,6 +24,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 </div>
 
 #### Info.plist
+
+아래 내용을 프로젝트 info.plist에 넣어 주세요. 
+KTourApiServiceKey는 한국관광공사 TourAPI(http://api.visitkorea.or.kr)에서 발급 받은 토큰입니다.
 
 Add or replace node below to you app info plist.
 
