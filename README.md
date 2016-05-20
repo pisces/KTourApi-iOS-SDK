@@ -4,7 +4,7 @@ KTourApiSDK는 한국관광공사 TourApi SDK 입니다.
 
 KTourApiSDK is open source iOS SDK to use Korea Tour Api.
 
-[![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApi-iOS-SDK)
+[![CI Status](http://img.shields.io/travis/pisces/KTourApi-iOS-SDK.svg?style=flat)](https://travis-ci.org/pisces/KTourApi-iOS-SDK)
 [![Version](https://img.shields.io/cocoapods/v/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 [![License](https://img.shields.io/cocoapods/l/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 [![Platform](https://img.shields.io/cocoapods/p/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
