@@ -27,6 +27,7 @@ class DemoViewController: UITableViewController {
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
             cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            cell?.textLabel?.font = cell?.textLabel?.font.fontWithSize(15)
         }
         
         cell!.textLabel?.text = paths[indexPath.row].rawValue

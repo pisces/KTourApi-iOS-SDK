@@ -96,7 +96,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var contentId: Int = 0
         public var contentTypeId: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -118,7 +118,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var overviewYN: Bool = false
         public var transGuideYN: Bool = false
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -143,7 +143,7 @@ public class KTourApiParameterSet: AbstractModel {
     public class DetailInfo: Content {
         public var detailYN: Bool = false
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -161,7 +161,7 @@ public class KTourApiParameterSet: AbstractModel {
     public class DetailImage: Content {
         public var imageYN: Bool = false
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -179,7 +179,7 @@ public class KTourApiParameterSet: AbstractModel {
     public class DetailIntro: Content {
         public var introYN: Bool = false
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -198,7 +198,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var areaCode: String?
         public var sigunguCode: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -216,7 +216,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var radius: Int = 0
         public var contentTypeId: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -236,7 +236,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var eventEndDate: NSDate?
         public var eventStartDate: NSDate?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -255,7 +255,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var sigunguCode: String?
         public var keyword: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         
@@ -276,7 +276,7 @@ public class KTourApiParameterSet: AbstractModel {
         public var contentTypeId: String?
         public var sigunguCode: String?
         
-        required init?(coder aDecoder: NSCoder) {
+        required public init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
         

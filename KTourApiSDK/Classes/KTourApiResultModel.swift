@@ -17,7 +17,7 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
         super.init(coder: aDecoder)
     }
     
-    override init(object: AnyObject?) {
+    override public init(object: AnyObject?) {
         super.init(object: object)
     }
     
@@ -36,6 +36,18 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
                     parseBody(dictionary: dict)
                 }
             }
+        }
+    }
+    
+    override public var description: String {
+        get {
+            var array: Array<String> = []
+            
+            for item: AnyObject in self.items! {
+                array.append(item.dictionary.description)
+            }
+            
+            return self.dictionary.description + "\r\n" + array.joinWithSeparator(",\r\n")
         }
     }
     
@@ -75,31 +87,31 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     //  getter/setter
     // ================================================================================================
     
-    var numOfRows: Int = 0
-    var pageNo: Int = 0
-    var totalCount: Int = 0
-    var resultCode: KTourApiResultCode = KTourApiResultCode.UNKNOWN_ERROR
-    var resultMsg: String?
+    public var numOfRows: Int = 0
+    public var pageNo: Int = 0
+    public var totalCount: Int = 0
+    public var resultCode: KTourApiResultCode = KTourApiResultCode.UNKNOWN_ERROR
+    public var resultMsg: String?
     public var items: Array<T>?
 }
 
 public class KTourApiResultItem: AbstractJSONModel {
     public class Code: KTourApiResultItem {
-        var rnum: Int = 0
-        var name: String?
+        public var rnum: Int = 0
+        public var name: String?
     }
     
     public class Area: Code {
-        var code: Int = 0
+        public var code: Int = 0
     }
     
     public class Category: Code {
-        var code: String?
+        public var code: String?
     }
     
     public class POIBase: KTourApiResultItem {
-        var contentid: Int = 0
-        var contentidtype: Int = 0
+        public var contentid: Int = 0
+        public var contenttypeid: Int = 0
     }
     
     public class POI: POIBase {
@@ -131,66 +143,66 @@ public class KTourApiResultItem: AbstractJSONModel {
         //  getter/setter
         // ================================================================================================
         
-        var mapx: Float?
-        var mapy: Float?
-        var areacode: Int = 0
-        var dist: Int = 0
-        var masterid: Int = 0
-        var mlvel: Int?
-        var readcount: Int = 0
-        var sigungucode: Int = 0
-        var addr1: String?
-        var addr2: String?
-        var cat1: String?
-        var cat2: String?
-        var cat3: String?
-        var tel: String?
-        var title: String?
-        var firstiamge: String?
-        var firstiamge2: String?
-        var zipcode: String?
-        var createdtime: NSDate?
-        var modifiedtime: NSDate?
+        public var mapx: Float?
+        public var mapy: Float?
+        public var areacode: Int = 0
+        public var dist: Int = 0
+        public var masterid: Int = 0
+        public var mlvel: Int?
+        public var readcount: Int = 0
+        public var sigungucode: Int = 0
+        public var addr1: String?
+        public var addr2: String?
+        public var cat1: String?
+        public var cat2: String?
+        public var cat3: String?
+        public var tel: String?
+        public var title: String?
+        public var firstiamge: String?
+        public var firstiamge2: String?
+        public var zipcode: String?
+        public var createdtime: NSDate?
+        public var modifiedtime: NSDate?
     }
     
     public class FestivalPOI: POI {
-        var eventstartdate: NSDate?
-        var eventenddate: NSDate?
+        public var eventstartdate: NSDate?
+        public var eventenddate: NSDate?
     }
     
     public class StayPOI: POI {
-        var hanok: Bool = false
-        var benikia: Bool = false
-        var goodstay: Bool = false
+        public var hanok: Bool = false
+        public var benikia: Bool = false
+        public var goodstay: Bool = false
     }
     
     public class POIDetail: POI {
-        var dongcode: Int = 0
-        var overview: String?
+        public var dongcode: Int = 0
+        public var overview: String?
     }
     
     public class POIDetailInfo: POIBase {
-        var fldgubun: Int = 0
-        var serialnum: Int = 0
-        var infoname: String?
-        var infotext: String?
+        public var fldgubun: Int = 0
+        public var serialnum: Int = 0
+        public var infoname: String?
+        public var infotext: String?
     }
     
     public class POIDetailIntro: POIBase {
-        var firstmenu: String?
-        var infocenterfood: String?
-        var opentimefood: String?
-        var parkingfood: String?
-        var reservationfood: String?
-        var restdatefood: String?
-        var smoking: String?
-        var treatmenu: String?
+        public var firstmenu: String?
+        public var infocenterfood: String?
+        public var opentimefood: String?
+        public var parkingfood: String?
+        public var reservationfood: String?
+        public var restdatefood: String?
+        public var smoking: String?
+        public var treatmenu: String?
     }
     
     public class POIDetailImage: POIBase {
-        var imagename: String?
-        var originimgurl: String?
-        var serialnum: String?
-        var smallimageurl: String?
+        public var imagename: String?
+        public var originimgurl: String?
+        public var serialnum: String?
+        public var smallimageurl: String?
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum KTourApiResultCode: Int {
+public enum KTourApiResultCode: Int {
     case
     NORMAL_CODE = 0,
     APPLICATION_ERROR = 1,

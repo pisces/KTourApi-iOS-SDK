@@ -17,6 +17,10 @@
 		DC024DFD1CEAD11D00B374DA /* KTourApiAppCenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC024DFB1CEAD11100B374DA /* KTourApiAppCenterTest.swift */; };
 		DCCE65F41CEDA05700959648 /* ApiPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCE65F31CEDA05700959648 /* ApiPathViewController.swift */; };
 		DCCE65F61CEDA09300959648 /* ApiPathView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCE65F51CEDA09300959648 /* ApiPathView.xib */; };
+		DCCEF8E71CEEA159007611DF /* DynamicHeightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCEF8E61CEEA159007611DF /* DynamicHeightViewCell.xib */; };
+		DCCEF8E91CEEA226007611DF /* DynamicHeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCEF8E81CEEA226007611DF /* DynamicHeightViewCell.swift */; };
+		DCCEF8EB1CEEEC8C007611DF /* POIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCEF8EA1CEEEC8C007611DF /* POIViewController.swift */; };
+		DCCEF8ED1CEEEC98007611DF /* POIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCCEF8EC1CEEEC98007611DF /* POIView.xib */; };
 		E300B192770DD63007424EF6 /* Pods_KTourApiSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18777AC3D9C8BBDE0DE4FF2 /* Pods_KTourApiSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,10 @@
 		DC024DFB1CEAD11100B374DA /* KTourApiAppCenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTourApiAppCenterTest.swift; sourceTree = "<group>"; };
 		DCCE65F31CEDA05700959648 /* ApiPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPathViewController.swift; sourceTree = "<group>"; };
 		DCCE65F51CEDA09300959648 /* ApiPathView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApiPathView.xib; sourceTree = "<group>"; };
+		DCCEF8E61CEEA159007611DF /* DynamicHeightViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicHeightViewCell.xib; sourceTree = "<group>"; };
+		DCCEF8E81CEEA226007611DF /* DynamicHeightViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightViewCell.swift; sourceTree = "<group>"; };
+		DCCEF8EA1CEEEC8C007611DF /* POIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIViewController.swift; sourceTree = "<group>"; };
+		DCCEF8EC1CEEEC98007611DF /* POIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIView.xib; sourceTree = "<group>"; };
 		E18777AC3D9C8BBDE0DE4FF2 /* Pods_KTourApiSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KTourApiSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74C38B6F814F269C398F85B /* Pods_KTourApiSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KTourApiSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,10 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* DemoViewController.swift */,
 				DCCE65F31CEDA05700959648 /* ApiPathViewController.swift */,
+				607FACD71AFB9204008FA782 /* DemoViewController.swift */,
+				DCCEF8E81CEEA226007611DF /* DynamicHeightViewCell.swift */,
+				DCCEF8EA1CEEEC8C007611DF /* POIViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				DCCE65F51CEDA09300959648 /* ApiPathView.xib */,
+				DCCEF8E61CEEA159007611DF /* DynamicHeightViewCell.xib */,
+				DCCEF8EC1CEEEC98007611DF /* POIView.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -256,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				DCCEF8ED1CEEEC98007611DF /* POIView.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				DCCEF8E71CEEA159007611DF /* DynamicHeightViewCell.xib in Resources */,
 				DCCE65F61CEDA09300959648 /* ApiPathView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -369,8 +383,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCCEF8EB1CEEEC8C007611DF /* POIViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* DemoViewController.swift in Sources */,
 				DCCE65F41CEDA05700959648 /* ApiPathViewController.swift in Sources */,
+				DCCEF8E91CEEA226007611DF /* DynamicHeightViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -131,6 +131,11 @@ NSString *const kModelDidSynchronizeNotification = @"kModelDidSynchronizeNotific
             return @([value doubleValue]);
     }
     
+    Class class = [self classOfPropertyNamed:key];
+    
+    if (class == [NSString class])
+        return [NSString stringWithFormat:@"%@", value];
+    
     return value;
 }
 
@@ -217,6 +222,25 @@ NSString *const kModelDidSynchronizeNotification = @"kModelDidSynchronizeNotific
 // ================================================================================================
 
 #pragma mark - Private methods
+
+- (Class)classOfPropertyNamed:(NSString *)propertyName {
+    Class propertyClass = nil;
+    objc_property_t property = class_getProperty([self class], [propertyName UTF8String]);
+    
+    if (property) {
+        NSString *propertyAttributes = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
+        NSArray *splitPropertyAttributes = [propertyAttributes componentsSeparatedByString:@","];
+        
+        if (splitPropertyAttributes.count > 0) {
+            NSString *encodeType = splitPropertyAttributes[0];
+            NSArray *splitEncodeType = [encodeType componentsSeparatedByString:@"\""];
+            NSString *className = splitEncodeType[1];
+            propertyClass = NSClassFromString(className);
+        }
+    }
+    
+    return propertyClass;
+}
 
 - (id)dictionaryWithValue:(id)value {
     if ([value isKindOfClass:[AbstractModel class]])
