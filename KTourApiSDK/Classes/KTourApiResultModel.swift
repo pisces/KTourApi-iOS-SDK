@@ -24,7 +24,7 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     override public func setProperties(object: AnyObject?) {
         super.setProperties(object)
         
-        if let dict: NSDictionary = object as! NSDictionary {
+        if let dict: NSDictionary = object as? NSDictionary {
             if let header = dict["response"]!["header"]! {
                 if let resultCode = header["resultCode"]! {
                     self.resultCode = KTourApiResultCode(rawValue: resultCode.integerValue)!
