@@ -1,9 +1,9 @@
 # KTourApi-iOS-SDK
 
-[![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApi-iOS-SDK)
-[![Version](https://img.shields.io/cocoapods/v/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApi-iOS-SDK)
-[![License](https://img.shields.io/cocoapods/l/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApi-iOS-SDK)
-[![Platform](https://img.shields.io/cocoapods/p/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApi-iOS-SDK)
+[![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApiSDK)
+[![Version](https://img.shields.io/cocoapods/v/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
+[![License](https://img.shields.io/cocoapods/l/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
+[![Platform](https://img.shields.io/cocoapods/p/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 
 ## Example
 
@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 <img src="Screenshot/sh_001.png" width="320" border="1" />
 <img src="Screenshot/sh_002.png" width="320" border="1"/>
 </div>
-
+<br/>
 <div>
 <img src="Screenshot/sh_003.png" width="320" border="1" />
 <img src="Screenshot/sh_004.png" width="320" border="1"/>
