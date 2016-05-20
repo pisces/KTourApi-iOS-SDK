@@ -1,6 +1,6 @@
 # KTourApi-iOS-SDK
 
-[![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApiSDK)
+[![CI Status](http://img.shields.io/travis/Steve Kim/KTourApiSDK.svg?style=flat)](https://travis-ci.org/Steve Kim/KTourApi-iOS-SDK)
 [![Version](https://img.shields.io/cocoapods/v/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 [![License](https://img.shields.io/cocoapods/l/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
 [![Platform](https://img.shields.io/cocoapods/p/KTourApiSDK.svg?style=flat)](http://cocoapods.org/pods/KTourApiSDK)
