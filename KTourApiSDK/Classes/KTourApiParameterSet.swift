@@ -9,13 +9,18 @@
 import PSFoundation
 
 public class KTourApiParameterSet: AbstractModel {
+    
     public enum ArrangeType: String {
         case
-        None        = "",
-        Title       = "A",
-        ViewDate    = "B",
-        ModifyDate  = "C",
-        RegistDate  = "D"
+        None                = "",
+        Title               = "A",
+        Popular             = "B",
+        ModifyDate          = "C",
+        RegistDate          = "D",
+        TitleImage          = "O",
+        PopularImage        = "P",
+        ModifyDateImage     = "Q",
+        RegistDateImage     = "R"
     }
     
     override public func format(value: AnyObject!, forKey key: String!) -> AnyObject! {

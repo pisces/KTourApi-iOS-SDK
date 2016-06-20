@@ -82,7 +82,7 @@ class ApiPathViewController: UITableViewController {
         case KTourApiPath.CategoryCode:
             KTourApiAppCenter.defaultCenter().call(
                 path: aPath,
-                params: KTourApiParameterSet.CategoryCode(numOfRows: 10, pageNo: 1, contentTypeId: nil, cat1: nil, cat2: nil, cat3: nil),
+                params: KTourApiParameterSet.CategoryCode(numOfRows: 10, pageNo: 1, contentTypeId: "76", cat1: "A02", cat2: nil, cat3: nil),
                 completion: {(result: KTourApiResult<KTourApiResultItem.Category>?, error:NSError?) -> Void in
                     self.addItemsWithResult(result, error: error)
             })

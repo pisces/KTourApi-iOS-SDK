@@ -9,6 +9,8 @@
 import PSFoundation
 
 public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
+    private var each: ((model: AbstractModel) -> Void)?
+    
     // ================================================================================================
     //  Overridden: AbstractJSONModel
     // ================================================================================================
@@ -57,6 +59,12 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
     //  Private methods
     // ================================================================================================
     
+    init(object: AnyObject?, each: ((model: AbstractModel) -> Void)?) {
+        self.each = each
+        
+        super.init(object: object)
+    }
+    
     func parseBody(dictionary aDict: NSDictionary) -> Void {
         if let body = aDict["response"]!["body"]! {
             if let numOfRows = body["numOfRows"]! {
@@ -75,7 +83,11 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
                 if !items.isEmpty {
                     if let item: AnyObject = items["item"]! {
                         if (item.isKindOfClass(NSArray.self)) {
-                            self.items = self.childWithArray(item as? Array, classType: T.self) as? Array
+                            self.items = self.childWithArray(item as? Array, classType: T.self, map: { model in
+                                if let each = self.each {
+                                    each(model: model)
+                                }
+                            }) as? Array
                         } else if (item.isKindOfClass(NSDictionary.self)) {
                             self.items = [T(object: item)]
                         }
@@ -83,6 +95,8 @@ public class KTourApiResult<T: AbstractJSONModel>: AbstractJSONModel {
                 }
             }
         }
+        
+        each = nil
     }
     
     // ================================================================================================
@@ -116,7 +130,7 @@ public class KTourApiResultItem: AbstractJSONModel {
         public var contenttypeid: Int = 0
     }
     
-    public class POI: POIBase {
+    @objc public class POI: POIBase {
         // ================================================================================================
         //  Overridden: AbstractJSONModel
         // ================================================================================================
@@ -145,10 +159,10 @@ public class KTourApiResultItem: AbstractJSONModel {
         //  getter/setter
         // ================================================================================================
         
-        public var mapx: Float?
-        public var mapy: Float?
+        public var mapx: Double = 0
+        public var mapy: Double = 0
         public var areacode: Int = 0
-        public var dist: Int = 0
+        public var dist: Double = 0
         public var masterid: Int = 0
         public var mlvel: Int?
         public var readcount: Int = 0
