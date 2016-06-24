@@ -36,6 +36,18 @@ public enum KTourApiPath: String {
     SearchStay          = "searchStay"
 }
 
+public enum KTourContentType: Int {
+    case
+    Tour    = 76,
+    Cultual = 78,
+    Event   = 85,
+    Leisure = 75,
+    Stay    = 80,
+    Shop    = 79,
+    Food    = 82,
+    Traffic = 77
+};
+
 public func KTourApiPathGetAll() -> Array<KTourApiPath> {
     return [KTourApiPath.AreaCode,
             KTourApiPath.CategoryCode,
