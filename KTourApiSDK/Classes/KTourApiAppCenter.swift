@@ -9,6 +9,20 @@
 import PSFoundation
 import w3action
 
+public enum KTourApiErrorDomain: String {
+    case
+    Unknown = "Unknown error!",
+    AreaCodeDoesNotExist = "Area code does not exist!",
+    SigunguCodeDoesNotExist = "Sigungu code does not exist!"
+}
+
+public enum KTourApiErrorCode: Int {
+    case
+    Unknown = 20001,
+    AreaCodeDoesNotExist = 20002,
+    SigunguCodeDoesNotExist = 20003
+}
+
 public enum KTourApiLanguageType: String {
     case
     Chs = "ChsService",
@@ -17,6 +31,7 @@ public enum KTourApiLanguageType: String {
     Ger = "GerService",
     Fre = "FreService",
     Jpn = "JpnService",
+    Kor = "KorService",
     Rus = "RusService",
     Spn = "SpnService"
 }
@@ -48,6 +63,12 @@ public enum KTourContentType: Int {
     Traffic = 77
 };
 
+public func KTourApiErrorCodeEquals(rawValue: Int) -> Bool {
+    return rawValue == KTourApiErrorCode.Unknown.rawValue ||
+        rawValue == KTourApiErrorCode.AreaCodeDoesNotExist.rawValue ||
+        rawValue == KTourApiErrorCode.SigunguCodeDoesNotExist.rawValue
+}
+
 public func KTourApiPathGetAll() -> Array<KTourApiPath> {
     return [KTourApiPath.AreaCode,
             KTourApiPath.CategoryCode,
@@ -59,12 +80,16 @@ public func KTourApiPathGetAll() -> Array<KTourApiPath> {
 }
 
 public class KTourApiAppCenter: NSObject {
-    let kKTourApiServiceKey: String = "KTourApiServiceKey"
-    let kKTourApiBasePath: String = "http://api.visitkorea.or.kr/openapi/service/rest"
+    let kKTourApiAreaCodeDict = "KTourApiAreaCodeDictKey"
+    let kKTourApiBasePath = "http://api.visitkorea.or.kr/openapi/service/rest"
+    let kKTourApiServiceKey = "KTourApiServiceKey"
     let kKTourApiParamsDataType = "_type"
     let kKTourApiParamsMobileApp = "MobileApp"
     let kKTourApiParamsMobileOS = "MobileOS"
     let kKTourApiParamsServiceKey = "ServiceKey"
+    let kKTourApiSigunguCodeDictGroup = "KTourApiSigunguCodeDictGroupKey"
+    
+    public typealias CodeSearchCompletion = (areaCode: Int, sigunguCode: Int, error: NSError?) -> Void
     
     private var areaCodeDict: Dictionary<String, Int>?
     private var sigunguCodeDictGroup: Dictionary<Int, Dictionary<String, Int>> = Dictionary()
@@ -76,6 +101,13 @@ public class KTourApiAppCenter: NSObject {
     override init() {
         if let serviceKey: String = NSBundle.mainBundle().objectForInfoDictionaryKey(kKTourApiServiceKey) as? String {
             self.serviceKey = serviceKey.stringByRemovingPercentEncoding
+            areaCodeDict = NSUserDefaults.standardUserDefaults().objectForKey(kKTourApiAreaCodeDict) as? Dictionary<String, Int>
+            
+            if let data = NSUserDefaults.standardUserDefaults().objectForKey(kKTourApiSigunguCodeDictGroup) as? NSData {
+                if let sigunguCodeDictGroup = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? Dictionary<Int, Dictionary<String, Int>> {
+                    self.sigunguCodeDictGroup = sigunguCodeDictGroup
+                }
+            }
         } else {
             #if DEBUG
                 print("KTourApiServiceKey does not exist in info plist file!")
@@ -98,45 +130,17 @@ public class KTourApiAppCenter: NSObject {
         return Static.instance!
     }
     
-    public func areaCode(name aName: String?, sigunguName: String?, completion: (areaCode: Int, sigunguCode: Int) -> Void) {
+    public func areaCode(name aName: String?, sigunguName: String?, completion: CodeSearchCompletion) {
         if aName == nil || sigunguName == nil {
-            completion(areaCode: 0, sigunguCode: 0)
+            self.errorCompletion(completion)
             return
         }
         
-        func errorState() {
-            completion(areaCode: 0, sigunguCode: 0)
-        }
-        
         if let areaCodeDict = areaCodeDict {
-            let areaCode = areaCodeDict[aName!]!
-            
-            if let sigunguCodeDict = sigunguCodeDictGroup[areaCode] {
-                let sigunguCode = sigunguCodeDict[sigunguName!]!
-                
-                completion(areaCode: areaCode, sigunguCode: sigunguCode)
-                
+            if let areaCode = areaCodeDict[aName!] {
+                sigunguCode(areadCode: areaCode, sigunguName: sigunguName, completion: completion)
             } else {
-                call(path: KTourApiPath.AreaCode,
-                     params: KTourApiParameterSet.AreaCode(numOfRows: 100, pageNo: 1, areaCode: String(format: "%d", areaCode)),
-                     completion: { (result: KTourApiResult<KTourApiResultItem.Area>?, error:NSError?) in
-                        if error == nil {
-                            if let items = result?.items {
-                                var sigunguCodeDict = Dictionary<String, Int>()
-                                
-                                for item in items {
-                                    sigunguCodeDict[item.name!] = item.code
-                                }
-                                
-                                self.sigunguCodeDictGroup[areaCode] = sigunguCodeDict
-                                self.areaCode(name: aName, sigunguName: sigunguName, completion: completion)
-                            } else {
-                                errorState()
-                            }
-                        } else {
-                            errorState()
-                        }
-                })
+                self.errorCompletion(completion)
             }
         } else {
             call(path: KTourApiPath.AreaCode,
@@ -144,22 +148,29 @@ public class KTourApiAppCenter: NSObject {
                 completion: { (result: KTourApiResult<KTourApiResultItem.Area>?, error:NSError?) in
                     if error == nil {
                         if let items = result?.items {
-                            self.areaCodeDict = Dictionary<String, Int>()
-                            
-                            for item in items {
-                                self.areaCodeDict![item.name!] = item.code
-                            }
-                            
-                            self.areaCode(name: aName, sigunguName: sigunguName, completion: completion)
+                            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                                self.areaCodeDict = Dictionary<String, Int>()
+                                
+                                for item in items {
+                                    self.areaCodeDict![item.name!] = item.code
+                                }
+                                
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.areaCode(name: aName, sigunguName: sigunguName, completion: completion)
+                                    NSUserDefaults.standardUserDefaults().setObject(self.areaCodeDict, forKey: self.kKTourApiAreaCodeDict)
+                                    NSUserDefaults.standardUserDefaults().synchronize()
+                                })
+                            })
                         } else {
-                            errorState()
+                            self.errorCompletion(completion)
                         }
                     } else {
-                        errorState()
+                        self.errorCompletion(completion)
                     }
             })
         }
     }
+    
     
     public func call<T: KTourApiParameterSet, Y: AbstractJSONModel>(path aPath: KTourApiPath,
                      params: T?,
@@ -194,9 +205,70 @@ public class KTourApiAppCenter: NSObject {
         }).sessionDataTask
     }
     
+    public func clearCaches() {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(kKTourApiAreaCodeDict)
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(kKTourApiSigunguCodeDictGroup)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    public func sigunguCode(areadCode aAreaCode: Int, sigunguName: String?, completion: CodeSearchCompletion) {
+        if let sigunguCodeDict = sigunguCodeDictGroup[aAreaCode] {
+            completion(areaCode: aAreaCode, sigunguCode: sigunguCodeDict[sigunguName!]!, error: nil)
+        } else {
+            call(path: KTourApiPath.AreaCode,
+                 params: KTourApiParameterSet.AreaCode(numOfRows: 100, pageNo: 1, areaCode: String(format: "%d", aAreaCode)),
+                 completion: { (result: KTourApiResult<KTourApiResultItem.Area>?, error:NSError?) in
+                    if error == nil {
+                        if let items = result?.items {
+                            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                                var sigunguCodeDict = Dictionary<String, Int>()
+                                
+                                for item in items {
+                                    sigunguCodeDict[item.name!] = item.code
+                                }
+                                
+                                self.sigunguCodeDictGroup[aAreaCode] = sigunguCodeDict
+                                
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.sigunguCode(areadCode: aAreaCode, sigunguName: sigunguName, completion: completion)
+                                    
+                                    let data = NSKeyedArchiver.archivedDataWithRootObject(self.sigunguCodeDictGroup)
+                                    NSUserDefaults.standardUserDefaults().setObject(data, forKey: self.kKTourApiSigunguCodeDictGroup)
+                                    NSUserDefaults.standardUserDefaults().synchronize()
+                                })
+                            })
+                        } else {
+                            self.errorCompletion(areaCode: aAreaCode, sigunguCode: 0, completion: completion)
+                            
+                        }
+                    } else {
+                        self.errorCompletion(areaCode: aAreaCode, sigunguCode: 0, completion: completion)
+                    }
+            })
+        }
+    }
+    
     // ================================================================================================
     //  private
     // ================================================================================================
+    
+    private func errorCompletion(completion: CodeSearchCompletion) {
+        errorCompletion(areaCode: 0, sigunguCode: 0, completion: completion)
+    }
+    
+    private func errorCompletion(areaCode aAreaCode: Int = 0, sigunguCode: Int = 0, completion: CodeSearchCompletion) {
+        var errorCode = KTourApiErrorCode.Unknown
+        var errorDomain = KTourApiErrorDomain.Unknown
+        if aAreaCode < 1 {
+            errorCode = KTourApiErrorCode.AreaCodeDoesNotExist
+            errorDomain = KTourApiErrorDomain.AreaCodeDoesNotExist
+        } else if sigunguCode < 1 {
+            errorCode = KTourApiErrorCode.SigunguCodeDoesNotExist
+            errorDomain = KTourApiErrorDomain.SigunguCodeDoesNotExist
+        }
+        
+        completion(areaCode: aAreaCode, sigunguCode: sigunguCode, error: NSError(domain: errorDomain.rawValue, code: errorCode.rawValue, userInfo: nil))
+    }
     
     private func requestObjectWithPath<T: KTourApiParameterSet, Y: AbstractJSONModel>(path: KTourApiPath,
                                        params: T?,
