@@ -216,8 +216,8 @@ public class KTourApiParameterSet: AbstractModel {
     }
     
     public class LocationBasedList: Common {
-        public var mapX: Float = 0.0
-        public var mapY: Float = 0.0
+        public var mapX: Double = 0.0
+        public var mapY: Double = 0.0
         public var radius: Int = 0
         public var contentTypeId: String?
         
@@ -225,7 +225,7 @@ public class KTourApiParameterSet: AbstractModel {
             super.init(coder: aDecoder)
         }
         
-        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, mapX: Float, mapY: Float, radius: Int = 1000) {
+        public init(listYN: String? = nil, arrange: ArrangeType = ArrangeType.None, numOfRows: Int, pageNo: Int, contentTypeId: String?, mapX: Double, mapY: Double, radius: Int = 1000) {
             super.init(listYN: listYN, arrange: arrange, numOfRows: numOfRows, pageNo: pageNo)
             
             self.contentTypeId = contentTypeId
