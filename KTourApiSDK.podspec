@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "KTourApiSDK"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Korea Tour Api iOS SDK."
 
 # This description is used to generate tags and improve search results.
